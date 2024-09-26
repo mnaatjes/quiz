@@ -3,11 +3,22 @@
 //-------------------------------------------------------------------------------------------------------
 /*------------------------------------------------------*/
 /**
- * @name Nav
- * @type {ObjectConstructor}
+ * @name NavButton
+ * @type {Class}
+ * @memberof QuizApp
+ * @description this class build upon the Button class with specialized methods for answer question buttons
+ * @extends Button
  */
 /*------------------------------------------------------*/
 class NavButton extends Button {
+    /**
+     * 
+     * @param {String} btn_id html element id
+     * @param {String} page get query
+     * @property {Constructor} tooltip
+     * @property {Constructor} alert
+     * @implements {init} initializing function: collect button states
+     */
     constructor(btn_id, page){
         super(btn_id);
         this.page       = page;

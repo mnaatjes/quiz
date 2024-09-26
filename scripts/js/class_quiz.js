@@ -4,7 +4,7 @@
 /*------------------------------------------------------*/
 /**
  * @name Quiz
- * 
+ * TODO: Quiz.html fix text overflow of question description
  */
 /*------------------------------------------------------*/
 class Quiz {
@@ -16,6 +16,7 @@ class Quiz {
         // game properties
         this.index          = index;
         this.score          = 0;
+        this.max_score      = 0;
         // nav properties
         this.ele_score  = {
             node: document.getElementById('ele_score'),
@@ -357,6 +358,8 @@ class Quiz {
             let slide_index = i;
             let quiz_item   = temp_quiz[slide_index];
             this.createSlide(quiz_item, slide_index);
+            // add up total points
+            this.max_score += quiz_item.points;
         }
         // remove quiz from local storage
         localStorage.removeItem(this.storage_quiz);
@@ -500,6 +503,8 @@ class Quiz {
                 this.btn_help.alert.removeAlertAnimation();
                 this.btn_help.tooltip.hideHint();
                 // remove event listeners
+                // TODO: listener_help_hover not defined
+                // TODO: Hint helper function not executing
                 this.btn_help.node.removeEventListener('mouseover', listener_help_hover);
                 this.btn_help.node.removeEventListener('click', listener_help_click);
                 this.btn_help.node.removeEventListener('mouseout', listener_help_exit);

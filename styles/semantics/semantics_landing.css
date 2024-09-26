@@ -91,6 +91,8 @@ section[class*="--landing__chart"] svg {
 /* Section - Landing: chart - circle */
 /*--------------------------------*/
 section[class*="--landing__chart"] svg circle {
+    /*VARS*/
+    --offset-target: 408.41;
     /*SVG*/
     fill: none;
     stroke-width: var(--chart-width);
@@ -109,7 +111,7 @@ section[class*="--landing__chart"] svg circle {
 }
 @keyframes landing__path--stroke {
     0% {  stroke-dashoffset: 0; }
-    100% { stroke-dashoffset: -102.10; }
+    100% { stroke-dashoffset: var(--offset-target); }
 }
 /*--------------------------------*/
 /* Section - Landing: chart */
