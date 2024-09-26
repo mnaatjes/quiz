@@ -1,0 +1,61 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Buttons - Main */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Button: */
+/*--------------------------------*/
+button,
+a[class^="btn"],
+button[class^="btn"] {
+    cursor: pointer;
+    outline: none;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*TRANSITION*/
+    transition: var(--ui-transition);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Button: icons */
+/*--------------------------------*/
+button i,
+a[class^="btn"] i,
+button[class^="btn"] i {
+    /*TEXT*/
+    text-align: center;
+}
+/*--------------------------------*/
+/* Button: icon - animation */
+/*--------------------------------*/
+.ani--btn__icon {
+    /*ANIMATION*/
+    animation: btn__icon 0.75s ease-in-out infinite;
+    /*DEBUGGING*/
+}
+@keyframes btn__icon {
+    0% {transform: rotate(0deg);}
+    20% {transform: rotate(20deg);}
+    40% {transform: rotate(-20deg);}
+    60% {transform: rotate(20deg);}
+    80% {transform: rotate(-20deg);}
+    100% {transform: rotate(0deg);}
+}
+/*--------------------------------*/
+/* Template: */
+/*--------------------------------*/
+    /*GRID*/
+    /*FLEX*/
+    /*VARS*/
+    /*POSITION*/
+    /*DISPLAY*/
+    /*BACKGROUND*/
+    /*BORDER*/
+    /*TEXT*/
+    /*SHADOW*/
+    /*TRANSITION*/
+    /*ANIMATION*/
+    /*TRANSFORM*/
+    /*DEBUGGING*/

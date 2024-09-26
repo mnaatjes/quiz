@@ -1,0 +1,73 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Buttons - submit */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Submit: */
+/*--------------------------------*/
+button[class*="--submit"] {
+    /*POSITION*/
+    min-width: 150px;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    /*DISPLAY*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*BORDER*/
+    border: 2px solid transparent;
+    border-radius: 8px;
+    /*TEXT*/
+    font-size: 28px;
+    font-weight: 500;
+}
+button[class*="--submit"] i {margin-right: 12px;}
+/*--------------------------------*/
+/* Nav: User(Hidden) */
+/*--------------------------------*/
+button[class*="--submit"][data-state="hidden"] {display: none;}
+/*--------------------------------*/
+/* Submit(Disabled): */
+/*--------------------------------*/
+button[class*="--submit"][data-state="disabled"] {
+    cursor: default;
+    /*BACKGROUND*/
+    background: var(--color-secondaryDim);
+    /*BORDER*/
+    border: 2px solid var(--color-strokeDim);
+    /*TEXT*/
+    color: var(--color-strokeDim);
+}
+button[class*="--submit"][data-state="disabled"] {color: var(--color-strokeDim);}
+/*--------------------------------*/
+/* Submit(Enabled): */
+/*--------------------------------*/
+button[class*="--submit"][data-state="enabled"] {
+    cursor: pointer;
+    /*BACKGROUND*/
+    background: var(--color-secondary);
+    /*BORDER*/
+    border: var(--ui-border);
+}
+/*--------------------------------*/
+/* Submit: Hover */
+/*--------------------------------*/
+button[class*="--submit"][data-state="enabled"]:hover {
+    /*BACKGROUND*/
+    background: var(--color-tertiary);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+}
+button[class*="--submit"][data-state="enabled"]:hover i {
+    /*ANIMATION*/
+    animation: btn__icon 1.25s ease-in-out infinite;
+}
+/*--------------------------------*/
+/* Submit: icon - Active */
+/*--------------------------------*/
+button[class*="--submit"][data-state="enabled"]:active {
+    /*BACKGROUND*/
+    background: var(--color-tertiary);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-inset);
+}

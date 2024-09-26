@@ -1,0 +1,247 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Semantics - Quiz */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Semantics: Main - question */
+/*--------------------------------*/
+main[class*="--question"] {
+    /*DISPLAY*/
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 72px 1fr 72px;
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Section: */
+/*--------------------------------*/
+section[class*="--question__dots"] {
+    /*GRID*/
+    grid-column: 1;
+    grid-row: 1;
+    /*POSITION*/
+    width: 100%;
+    height: 100%;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/*--------------------------------*/
+/* Section: */
+/*--------------------------------*/
+section[class*="--questions__wrapper"] {
+    /*GRID*/
+    grid-column: 1;
+    grid-row: 2;
+    /*POSITION*/
+    padding-bottom: 12px;
+    width: 100%;
+    height: 100%;
+    /*DISPLAY*/
+    overflow: hidden;
+}
+/*--------------------------------*/
+/* Section: */
+/*--------------------------------*/
+article[class*="--questions__slides__container"] {
+    /*POSITION*/
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: row;
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Section: */
+/*--------------------------------*/
+form[class*="--question__buttons"] {
+    /*GRID*/
+    grid-column: 1;
+    grid-row: 3;
+    /*POSITION*/
+    width: 100%;
+    height: 100%;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/*--------------------------------*/
+/* Article: */
+/*--------------------------------*/
+.slide {
+    /*FLEX*/
+    flex: 1 0 100%;
+    /*POSITION*/
+    width: 100%;
+    height: 100%;
+    /*DISPLAY*/
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    /*DEBUGGING*/
+    /*border: 1px solid black;*/
+}
+/*--------------------------------*/
+/* Article: */
+/*--------------------------------*/
+.slide__question__container {
+    /*GRID*/
+    grid-column: 1;
+    grid-row: 1;
+    /*POSITION*/
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: column;
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Article: */
+/*--------------------------------*/
+.slide__answer__container {
+    /*GRID*/
+    grid-column: 1;
+    grid-row: 2;
+    /*POSITION*/
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Question: */
+/*--------------------------------*/
+.question__body {
+    /*FLEX*/
+    flex: 1;
+    /*POSITION*/
+    margin-top: 40px;
+    margin-bottom: 12px;
+    padding: 40px 24px 24px 24px;
+    /*BACKGROUND*/
+    background: var(--color-secondary);
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 8px;
+}
+/*--------------------------------*/
+/* Question: icon */
+/*--------------------------------*/
+.question__icon {
+    /*FLEX*/
+    /*POSITION*/
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    /*DISPLAY*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*BACKGROUND*/
+    background: var(--color-primary);
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 100%;
+    /*TEXT*/
+    font-size: 24px;
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+}
+/*--------------------------------*/
+/* Question: timer */
+/*--------------------------------*/
+.question__timer {
+    /*POSITION*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    /*DISPLAY*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*BACKGROUND*/
+    background-image: conic-gradient(var(--color-confirm), var(--color-primary), var(--color-error));
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 100%;
+    /*TEXT*/
+    font-size: 20px;
+    font-weight: 600;
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on), var(--ui-shadow-inset);
+}
+/*--------------------------------*/
+/* Question: timer - svg */
+/*--------------------------------*/
+.question__timer svg {
+    /*POSITION*/
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*BORDER*/
+    border-radius: 100%;
+    /*TRANSFORM*/
+    transform: rotate(-90deg);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Question: timer - svg: circle */
+/*--------------------------------*/
+.question__timer svg circle {
+    /*SVG*/
+    fill: none;
+    stroke-width: 10px;
+    stroke-linecap:butt;
+    stroke-dasharray: 207.34;
+    stroke: var(--color-stroke);
+}
+.ani--countdown {
+    /*ANIMATION*/
+    animation-name: path--stroke;
+    animation-timing-function: steps(15);
+    animation-fill-mode: forwards;
+    animation-duration: 15s;
+    animation-delay: 0s;
+}
+@keyframes path--stroke {
+    0% {  stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -207.34; }
+}
+/*--------------------------------*/
+/* Question: timer - counter */
+/*--------------------------------*/
+.question__timer__counter {
+    /*POSITION*/
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    /*DISPLAY*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*BACKGROUND*/
+    background: var(--color-secondary);
+    /*BORDER*/
+    border: 1px solid var(--color-stroke);
+    border-radius: 100%;
+}

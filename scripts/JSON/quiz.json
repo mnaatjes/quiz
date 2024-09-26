@@ -1,0 +1,259 @@
+{"quizzes": [
+        {"quiz": "science",
+            "questions": [
+                {
+                    "question": "Danish astronomer Ole Roemer was the first person to measure the speed of light. What is that value?",
+                    "hint": "238,900 miles is the linear distance of the earth to the moon",
+                    "points": 200,
+                    "answers": [
+                            {"result": true, "content": "300,000 km/sec"},
+                            {"result": false, "content": "250,000 mph"},
+                            {"result": false, "content": "Warp 5"}
+                    ]
+                },
+                {
+                    "question": "Apollo 8, 10-17 flew to the moon between 1969-1972. How many people have stepped foot on the moon?",
+                    "hint": "Apollo 13 never landed",
+                    "points": 220,
+                    "answers": [
+                            {"result": false, "content": 10},
+                            {"result": true, "content": 12},
+                            {"result": false, "content": 8}
+                    ]
+                },
+                {
+                    "question": "Who was the first commander of the Space Shuttle? This person also flew to the moon - twice.",
+                    "hint": "John Glenn went back to space in the 90s",
+                    "points": 220,
+                    "answers": [
+                            {"result": true, "content": "John Young"},
+                            {"result": false, "content": "John Glenn"},
+                            {"result": false, "content": "Story Muskgrave"}
+                    ]
+                },
+                {
+                    "question": "Chemist Otto Han discovered this process, which can release enormous amounts of energy, in 1938.",
+                    "hint": "This can make cheap energy or a big boom.",
+                    "points": 125,
+                    "answers": [
+                            {"result": false, "content": "Internal Combustion"},
+                            {"result": false, "content": "Neutron Decay"},
+                            {"result": true, "content": "Nuclear Fission"}
+                    ]
+                },
+                {
+                    "question": "The Large Hadron Collider at CERN discovered this fundamental partical in 2012; though it had been theorized back in 1964.",
+                    "hint": "This particle is classified as a boson.",
+                    "points": 125,
+                    "answers": [
+                            {"result": true, "content": "Higgs Boson"},
+                            {"result": false, "content": "Z Boson"},
+                            {"result": false, "content": "Antimatter"}
+                    ]
+                },
+                {
+                    "question": "This landmark evidence of the Big Bang Theory was discovered by accident in 1965 by Arno Penzias and Robert Wilson:",
+                    "hint": "It is part of the electromagnetic spectrum.",
+                    "points": 325,
+                    "answers": [
+                            {"result": false, "content": "Dark Matter"},
+                            {"result": true, "content": "Consmic Microwave Background"},
+                            {"result": false, "content": "WOW Signal"}
+                    ]
+                }
+            ]
+        },
+        {"quiz": "geography",
+            "questions": [
+                {
+                    "question": "What is the largest Country by land area in South America?",
+                    "hint": "This country has Portugese as its national language",
+                    "points": 120,
+                    "answers": [
+                        {"result": false, "content": "Columbia"},
+                        {"result": false, "content": "India"},
+                        {"result": true, "content": "Brazil"}
+                    ]
+                },
+                {
+                    "question": "Marseille is a former colony of this ancient empire:",
+                    "hint": "This empire was incorporated into a larger and more robust neighbor.",
+                    "points": 250,
+                    "answers": [
+                        {"result": true, "content": "Greek"},
+                        {"result": false, "content": "Carthaginian"},
+                        {"result": false, "content": "Roman"}
+                    ]
+                },
+                {
+                    "question": "What is the longest river in Europe?",
+                    "hint": "This river flows into the Caspian Sea.",
+                    "points": 200,
+                    "answers": [
+                        {"result": false, "content": "Danube"},
+                        {"result": true, "content": "Volga"},
+                        {"result": false, "content": "Dnieper"}
+                    ]
+                },
+                {
+                    "question": "The five themes of Geography are: Location, Human-Environment Interaction, Movement, Region, and...",
+                    "hint": "This theme is similar to one already listed.",
+                    "points": 290,
+                    "answers": [
+                        {"result": false, "content": "Continental Drift"},
+                        {"result": true, "content": "Place"},
+                        {"result": false, "content": "Landscape"}
+                    ]
+                },
+                {
+                    "question": "The Fertile Crescent is a region believed to be one of the first locations of agricultural settlement. It is near modern day:",
+                    "hint": "This area is between two rivers",
+                    "points": 190,
+                    "answers": [
+                        {"result": false, "content": "Turkey"},
+                        {"result": false, "content": "Italy"},
+                        {"result": true, "content": "Iraq"}
+                    ]
+                },
+                {
+                    "question": "This area of Northern Europe used to be a land bridge. It reached its maximum extent 8000bc.",
+                    "hint": "It dissapeared after the last ice age.",
+                    "points": 225,
+                    "answers": [
+                        {"result": false, "content": "Bering Land Bridge"},
+                        {"result": false, "content": "Atlantis"},
+                        {"result": true, "content": "Doggerland"}
+                    ]
+                }
+            ]
+        },
+        {"quiz": "technology",
+            "questions": [
+                {
+                    "question": "This mid-century computer used a 15-bit wordlength and had a core rope memory (RAM) storage of 4KB",
+                    "hint": "It fit inside a small space.",
+                    "points": 225,
+                    "answers": [
+                        {"result": false, "content": "UNIVAC 1107"},
+                        {"result": false, "content": "IMB System 360"},
+                        {"result": true, "content": "Apollo Guidance Computer"}
+                    ]
+                },
+                {
+                    "question": "Due to their speed and distance from Earth, GPS Satellites must compensate for this Einsteinian theory:",
+                    "hint": "It's a concept explored in the movie Interstellar.",
+                    "points": 225,
+                    "answers": [
+                        {"result": false, "content": "Energy-Mass Conversion"},
+                        {"result": true, "content": "Special and General Relativity"},
+                        {"result": false, "content": "Quantum Entanglement"}
+                    ]
+                },
+                {
+                    "question": "This Austrian-born actress was also a self-taught inventor who discovered and patented Frequency Hopping.",
+                    "hint": "Her discovery aided the Allies during WWII.",
+                    "points": 150,
+                    "answers": [
+                        {"result": true, "content": "Hedy Lamarr"},
+                        {"result": false, "content": "Ingrid Bergman"},
+                        {"result": false, "content": "Audrey Hepburn"}
+                    ]
+                },
+                {
+                    "question": "Steve Jobs visited this company and 'borrowed' their Graphical User Interface for Apple products:",
+                    "hint": "'We both had this rich neighbor.. I broke in to steal the TV and found that you had already stolen it.' - Bill Gates",
+                    "points": 175,
+                    "answers": [
+                        {"result": false, "content": "Bell Labs"},
+                        {"result": true, "content": "Xerox Parc"},
+                        {"result": false, "content": "Texas Instruments"}
+                    ]
+                },
+                {
+                    "question": "A cathode-ray tube (CRT), a type of [???] was used by Philo Farnsworth to create the first electronic television.",
+                    "hint": "Such devices were also used in early computers to implement logic.",
+                    "points": 125,
+                    "answers": [
+                        {"result": false, "content": "Light Emitting Diode"},
+                        {"result": false, "content": "Electronic Relay"},
+                        {"result": true, "content": "Vacuum Tube"}
+                    ]
+                },
+                {
+                    "question": "This microprocessor had a clock rate of 1-3 MHz and powered the Apple II, NES, and Commodore 64.",
+                    "hint": "It wasn't made by Intel.",
+                    "points": 125,
+                    "answers": [
+                        {"result": false, "content": "Intel 8008"},
+                        {"result": true, "content": "MOS 6502"},
+                        {"result": false, "content": "Zilog Z80"}
+                    ]
+                }
+            ]
+        },
+        {"quiz": "history",
+            "questions": [
+                {
+                    "question": "The Bayeux Tapestry depicts this famous medieval battle which altered the course of English history.",
+                    "hint": "This event was related to the Norman Conquest.",
+                    "points": 120,
+                    "answers": [
+                        {"result": false, "content": "Siege of Exeter"},
+                        {"result": true, "content": "Battle of Fulford"},
+                        {"result": false, "content": "Vacuum Tube"}
+                    ]
+                },
+                {
+                    "question": "This period of widespead societal collapse occured during the 12th century BC in the Mediterranean.",
+                    "hint": "It coincided with the downfall of Mycenaean Greece.",
+                    "points": 220,
+                    "answers": [
+                        {"result": false, "content": "Great Filter"},
+                        {"result": false, "content": "Black Plague"},
+                        {"result": true, "content": "Bronze Age Collapse"}
+                    ]
+                },
+                {
+                    "question": "This secret diplomatic communication pushed the United States into WWI.",
+                    "hint": "It proposed a military contract between Germany and Mexico.",
+                    "points": 220,
+                    "answers": [
+                        {"result": true, "content": "Zimmermann Telegram"},
+                        {"result": false, "content": "Fourteen Points"},
+                        {"result": false, "content": "Marconi Telegram"}
+                    ]
+                },
+                {
+                    "question": "This thirteen days of tension in October 1962 almost brought the world into nuclear war.",
+                    "hint": "An island in the Caribbean became the focal point of this incident.",
+                    "points": 220,
+                    "answers": [
+                        {"result": false, "content": "Berlin Airlift"},
+                        {"result": true, "content": "Cuban Missile Crisis"},
+                        {"result": false, "content": "Dunkirk"}
+                    ]
+                },
+                {
+                    "question": "This earthen structure just outside of St. Louis was once the largest pre-Columbian settlement in North America.",
+                    "hint": "It was the larest and most infleuntial urban settlement of the Mississippian Culture.",
+                    "points": 220,
+                    "answers": [
+                        {"result": false, "content": "Eldorado"},
+                        {"result": false, "content": "Chichen Itza"},
+                        {"result": true, "content": "Cahokia"}
+                    ]
+                },
+                {
+                    "question": "On this date, the Japanese Empire carried out a surprise attack on an American outpost in the Pacific.",
+                    "hint": "It brought the US into WWII.",
+                    "points": 120,
+                    "answers": [
+                        {"result": false, "content": "Nov. 22 1963"},
+                        {"result": false, "content": "Nov. 11 1918"},
+                        {"result": true, "content": "Dec. 7th 1941"}
+                    ]
+                }
+            ]
+        }
+    ]
+}

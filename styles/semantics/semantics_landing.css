@@ -1,0 +1,165 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Semantics - Landing */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Main - Landing */
+/*--------------------------------*/
+main[class*="--landing"] {
+    /*DISPLAY*/
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Section - Landing: header */
+/*--------------------------------*/
+section[class*="--landing__header"] {
+    /*GRID*/
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    /*TEXT*/
+    text-align: center;
+}
+/*--------------------------------*/
+/* Section - Landing: header */
+/*--------------------------------*/
+section[class*="--landing__header"] i {
+    /*TEXT*/
+    text-align: center;
+    font-size: 48px;
+}
+/*--------------------------------*/
+/* Section - Landing: nav */
+/*--------------------------------*/
+section[class*="--landing__nav"] {
+    /*GRID*/
+    grid-column: 1;
+    grid-row: 4;
+    /*POSITION*/
+    width: 100%;
+    height: 100%;
+}
+/*--------------------------------*/
+/* Section - Landing: chart */
+/*--------------------------------*/
+section[class*="--landing__chart"]{
+    /*VARS*/
+    --chart-width: 34px;
+    /*GRID*/
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+    /*POSITION*/
+    position: relative;
+    width: 150px;
+    height: 150px;
+    /*DISPLAY*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*BACKGROUND*/
+    background-image: conic-gradient(var(--color-confirm), var(--color-primary), var(--color-error));
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 100%;
+    /*TEXT*/
+    font-size: 20px;
+    font-weight: 600;
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on), var(--ui-shadow-inset);
+    /*ANIMATION*/
+    /*TRANSFORM*/
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Section - Landing: chart - svg */
+/*--------------------------------*/
+section[class*="--landing__chart"] svg {
+    /*POSITION*/
+    width: 100%;
+    height: 100%;
+    /*BORDER*/
+    border-radius: 100%;
+    /*TRANSFORM*/
+    transform: rotate(-89deg);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Section - Landing: chart - circle */
+/*--------------------------------*/
+section[class*="--landing__chart"] svg circle {
+    /*SVG*/
+    fill: none;
+    stroke-width: var(--chart-width);
+    stroke-linecap: butt;
+    stroke-dasharray: 408.41;
+    stroke: var(--color-stroke);
+    /*DEBUGGING*/
+}
+.ani--landing-chart {
+    /*ANIMATION*/
+    animation-name: landing__path--stroke;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+    animation-delay: 0s;
+}
+@keyframes landing__path--stroke {
+    0% {  stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -102.10; }
+}
+/*--------------------------------*/
+/* Section - Landing: chart */
+/*--------------------------------*/
+.--landing__chart__center {
+    /*POSITION*/
+    position: absolute;
+    z-index: 2;
+    width: calc(100% - var(--chart-width));
+    height: calc(100% - var(--chart-width));
+    /*DISPLAY*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*BACKGROUND*/
+    background: var(--color-secondary);
+    /*BORDER*/
+    border: 1px solid var(--color-stroke);
+    border-radius: 100%;
+    /*TEXT*/
+    font-size: 28px;
+}
+/*--------------------------------*/
+/* Section - Landing: nav */
+/*--------------------------------*/
+section[class*="--landing__nav"] {
+    /*GRID*/
+    grid-column: 1;
+    grid-row: 3;
+    /*POSITION*/
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template: */
+/*--------------------------------*/
+    /*GRID*/
+    /*FLEX*/
+    /*VARS*/
+    /*POSITION*/
+    /*DISPLAY*/
+    /*BACKGROUND*/
+    /*BORDER*/
+    /*TEXT*/
+    /*SHADOW*/
+    /*TRANSITION*/
+    /*ANIMATION*/
+    /*TRANSFORM*/
+    /*DEBUGGING*/

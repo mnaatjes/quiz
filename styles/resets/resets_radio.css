@@ -1,0 +1,219 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Radio */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Radio: */
+/*--------------------------------*/
+.radio__container,
+.radio__container[data-state="enabled"] {
+    /*POSITION*/
+    position: relative;
+    margin-bottom: 12px;
+    padding: 12px;
+    width: 100%;
+    /*DISPLAY*/
+    display: flex;
+    align-items: center;
+    /*BACKGROUND*/
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 8px;
+    /*TRANSITION*/
+    transition: var(--ui-transition);
+    /*DEBUGGING*/
+}
+.radio__container[data-state="enabled"] {cursor: pointer;}
+.radio__container:last-child {margin-bottom: 0;}
+/*--------------------------------*/
+/* Radio: Hover */
+/*--------------------------------*/
+.radio__container[data-state="enabled"]:hover {
+    /*BACKGROUND*/
+    background: var(--color-primaryContainer);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+}
+/*--------------------------------*/
+/* Radio: Active */
+/*--------------------------------*/
+.radio__container[data-state="enabled"]:active {
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-inset);
+}
+/*---------------------------------------------------------------*/
+/* Radio Container(Disabled): */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Disabled): */
+/*--------------------------------*/
+.radio__container[data-state="disabled"] {
+    /*BORDER*/
+    border-color: var(--color-strokeDim);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-off);
+    /*TEXT*/
+    color: var(--color-strokeDim);
+}
+/*--------------------------------*/
+/* Radio(Disabled): Checkmark True */
+/*--------------------------------*/
+.radio__container[data-state="disabled"] span {
+    /*BORDER*/
+    border-color: var(--color-strokeDim);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-inset);
+}
+/*--------------------------------*/
+/* Disabled): Value = False */
+/*--------------------------------*/
+.radio__container[data-state="disabled"][data-value="false"] {
+    /*BACKGROUND*/
+    background: var(--color-errorContainer);
+}
+.radio__container[data-state="disabled"][data-value="false"] span {
+    /*BACKGROUND*/
+    background: var(--color-errorContainer);
+}
+/*--------------------------------*/
+/* Disabled): Value = True */
+/*--------------------------------*/
+.radio__container[data-state="disabled"][data-value="true"] {
+    /*BACKGROUND*/
+    background: var(--color-confirmContainer);
+}
+.radio__container[data-state="disabled"][data-value="true"] span {
+    /*BACKGROUND*/
+    background: var(--color-confirmContainer);
+}
+/*---------------------------------------------------------------*/
+/* Radio Container(Disabled): */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Disabled): Selected */
+/*--------------------------------*/
+.radio__container[data-state="disabled"][data-selected="true"] {
+    /*BORDER*/
+    border-color: var(--color-stroke);
+    /*TEXT*/
+    color: var(--color-stroke);
+}
+/*--------------------------------*/
+/* Disabled): Selected */
+/*--------------------------------*/
+.radio__container[data-state="disabled"][data-selected="false"] {
+    /*BORDER*/
+    border-color: var(--color-strokeDim);
+    /*BACKGROUND*/
+    background: var(--color-background);
+    /*TEXT*/
+    color: var(--color-strokeDim);
+}
+.radio__container[data-state="disabled"][data-selected="false"][data-value="true"] {
+    /*BACKGROUND*/
+    background: var(--color-confirmContainer);
+}
+/*---------------------------------------------------------------*/
+/* Radio Container(Disabled): Checkbox */
+/*---------------------------------------------------------------*/
+.radio__container[data-state="disabled"][data-selected="true"] span {
+    /*BORDER*/
+    border-color: var(--color-stroke);
+}
+.radio__container[data-state="disabled"][data-selected="true"][data-value="true"] span {
+    /*BACKGROUND*/
+    background: var(--color-confirm);
+}
+.radio__container[data-state="disabled"][data-selected="true"][data-value="false"] span {
+    /*BACKGROUND*/
+    background: var(--color-error);
+}
+.radio__container[data-state="disabled"][data-selected="false"][data-value="false"] span {
+    /*BACKGROUND*/
+    background: var(--color-background);
+}
+.radio__container[data-state="disabled"][data-selected="false"][data-value="true"] span {
+    /*BACKGROUND*/
+    background: var(--color-confirmContainer);
+}
+/*---------------------------------------------------------------*/
+/* Quiz: Radio - Input */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Radio: input */
+/*--------------------------------*/
+input[type="radio"] {
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    /*POSITION*/
+    position: absolute;
+    /*TRANSFORM*/
+    opacity: 0;
+    /*DEBUGGING*/
+}
+/*---------------------------------------------------------------*/
+/* Quiz: Radio - Label */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Radio: label */
+/*--------------------------------*/
+.radio__container label {
+    /*TEXT*/
+    font-size: 18px;
+    font-weight: 600;
+}
+/*---------------------------------------------------------------*/
+/* Quiz: Radio - Checkmark */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Radio: Checkmark */
+/*--------------------------------*/
+.radio__container span {
+    /*POSITION*/
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    /*DISPLAY*/
+    /*BACKGROUND*/
+    background: var(--color-background);
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 100%;
+    /*TRANSITION*/
+    transition: var(--ui-transition);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Radio(Enabled): Checkmark */
+/*--------------------------------*/
+.radio__container[data-state="enabled"]:hover span {
+    /*BACKGROUND*/
+    background: var(--color-primary);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Radio(Enabled): Checkmark */
+/*--------------------------------*/
+.radio__container[data-state="enabled"]:active span {
+    /*BACKGROUND*/
+    background: var(--color-primary);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-inset);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template: */
+/*--------------------------------*/
+    /*GRID*/
+    /*FLEX*/
+    /*VARS*/
+    /*POSITION*/
+    /*DISPLAY*/
+    /*BACKGROUND*/
+    /*BORDER*/
+    /*TEXT*/
+    /*SHADOW*/
+    /*TRANSITION*/
+    /*ANIMATION*/
+    /*TRANSFORM*/
+    /*DEBUGGING*/

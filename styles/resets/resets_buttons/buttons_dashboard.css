@@ -1,0 +1,57 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Buttons - Dashboard */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Dashboard: */
+/*--------------------------------*/
+button[class*="--dashboard"] {
+    /*POSITION*/
+    min-width: 150px;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 100%;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*BACKGROUND*/
+    background: var(--color-secondary);
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 8px;
+    /*TEXT*/
+    font-weight: 600;
+}
+/*--------------------------------*/
+/* Dashboard: icon */
+/*--------------------------------*/
+button[class*="--dashboard"] i {
+    /*TEXT*/
+    font-size: 50px;
+}
+/*--------------------------------*/
+/* Dashboard: Hover */
+/*--------------------------------*/
+button[class*="--dashboard"]:hover {
+    /*BACKGROUND*/
+    background: var(--color-tertiary);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+}
+/*--------------------------------*/
+/* Dashboard: icon - Hover */
+/*--------------------------------*/
+button[class*="--dashboard"]:hover i {
+    /*ANIMATION*/
+    animation: btn__icon 1.25s ease-in-out infinite;
+}
+/*--------------------------------*/
+/* Dashboard: Active */
+/*--------------------------------*/
+button[class*="--dashboard"]:active {
+    /*BACKGROUND*/
+    background: var(--color-tertiary);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-inset);
+}

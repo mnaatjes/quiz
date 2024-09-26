@@ -1,0 +1,48 @@
+/*--------------------------------*/
+/* Score-Container: */
+/*--------------------------------*/
+.score__container {
+    /*POSITION*/
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 85px;
+    height: 85px;
+    /*DISPLAY*/
+    display: block;
+}
+/*--------------------------------*/
+/* Score-Container(Visible): */
+/*--------------------------------*/
+.score__container[data-state="enabled"] {display: block;}
+/*--------------------------------*/
+/* Score-Container(Hidden): */
+/*--------------------------------*/
+.score__container[data-state="hidden"] {display: none;}
+/*--------------------------------*/
+/* Score: */
+/*--------------------------------*/
+.score {
+    /*POSITION*/
+    width: 100%;
+    height: 100%;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*BACKGROUND*/
+    background: var(--color-primary);
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 100%;
+    /*TEXT*/
+    font-size: 14px;
+    font-weight: 600;
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+}
+/*--------------------------------*/
+/* Score: number display */
+/*--------------------------------*/
+.score span {font-size: 16px;}

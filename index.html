@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!--w3 Fonts -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--Font Awesome Update-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!--Main CSS Document-->
+    <link rel="stylesheet" href="styles/main.css">
+    <head>
+        <title>CIS174: Quiz - Splashpage</title>
+    </head>
+    <body>
+        <!--Grid Start-->
+        <div class="wrapper__grid">
+            <!--Header Start-->
+            <header>
+                <nav>
+                    <button id="btn_home" href="dashboard.html" class="btn--nav" data-state="enabled">
+                        <i class="fa fa-home"></i>
+                        <div class="tooltip"></div>
+                    </button>
+                    <button id="btn_info" class="btn--nav--info" data-state="enabled">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <div class="alert--hint"></div>
+                        <div class="tooltip"></div>
+                    </button>
+                    <button id="btn_help" class="btn--nav" data-state="enabled">
+                        <i class="fas fa-bolt"></i>
+                        <div class="alert--hint"></div>
+                        <div class="tooltip"></div>
+                    </button>
+                    <div class="nav__spacer">
+                        <button id="btn_user" href="user.html" class="btn--user" data-state="enabled">
+                            <i class="fa-regular fa-user"></i>
+                            <span></span>
+                        </button>
+                        <div id="ele_score" class="score__container" data-state="hidden">
+                            <div class="score">Score:<span id="scoreboard">0</span></div>
+                            <div id="alert_points" class="alert--points">&plus;10&excl;</div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <!--Header End-->
+            <!--Main Start-->
+                <main class="--splash">
+                    <section class="--splash__logo">
+                        <img src="assets/icon_logo.png" alt="logo">
+                    </section>
+                    <section class="--splash__header">
+                        <h3>Welcome</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <form id="form_splash" action="dashboard.html" method="GET" onsubmit="validateSplash()">
+                            <input id="username" name="username" type="text" minlength="3" maxlength="20" size="25" placeholder="Enter a Username">
+                            <small id="error-username" class="--error">Username must be at least 4 characters long&excl;</small>
+                            <button id="splash_submit" type="submit" class="btn--submit" data-state="disabled">
+                                <i class="fa-regular fa-paper-plane"></i>
+                                Play Quiz&excl;
+                            </button>
+                        </form>
+                    </section>
+                </main>
+            <!--Main End-->
+            <!--Footer Start-->
+            <footer>
+                <a href="">Terms of Service</a>
+                <span>&copy;Michael Naatjes</span>
+            </footer>
+            <!--Footer End-->
+        </div>
+        <!--Grid End-->
+    </body>
+    <script src="scripts/js/functions_main.js" type="text/Javascript"></script>
+    <script src="scripts/js/constructor_alerts.js" type="text/Javascript"></script>
+    <script src="scripts/js/constructor_tooltip.js" type="text/Javascript"></script>
+    <script src="scripts/js/class_button.js" type="text/Javascript"></script>
+    <script src="scripts/js/class_button_answer.js" type="text/Javascript"></script>
+    <script src="scripts/js/class_button_nav.js" type="text/Javascript"></script>
+    <script src="scripts/js/class_slide.js" type="text/Javascript"></script>
+    <script src="scripts/js/class_quiz.js" type="text/Javascript"></script>
+    <script src="scripts/js/implementation_quiz.js" type="text/Javascript"></script>
+</html>

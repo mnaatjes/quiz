@@ -1,0 +1,83 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Buttons - action */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Action: */
+/*--------------------------------*/
+button[class*="--action"] {
+    /*POSITION*/
+    min-width: 150px;
+    width: 100%;
+    height: 100%;
+    /*DISPLAY*/
+    display: block;
+    /*TEXT*/
+    font-size: 28px;
+    font-weight: 500;
+}
+/*--------------------------------*/
+/* Action: first-child */
+/*--------------------------------*/
+button[class*="--action"]:first-child {
+    /*POSITION*/
+    margin-right: 12px;
+}
+/*--------------------------------*/
+/* Action: icon */
+/*--------------------------------*/
+button[class*="--action"] i {
+    /*POSITION*/
+    margin-left: 12px;
+    /*TEXT*/
+    font-size: 24px;
+}
+button[class*="--action"][data-state="enabled"]:hover i {
+    /*ANIMATION*/
+    animation: btn__icon 1.25s ease-in-out infinite;
+}
+/*--------------------------------*/
+/* Nav: User(Hidden) */
+/*--------------------------------*/
+button[class*="--action"][data-state="hidden"] {display: none;}
+/*--------------------------------*/
+/* Action(enabled): */
+/*--------------------------------*/
+button[class*="--action"][data-state="enabled"] {
+    /*BACKGROUND*/
+    background: var(--color-secondary);
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 8px;
+}
+/*--------------------------------*/
+/* Action(enabled): Hover */
+/*--------------------------------*/
+button[class*="--action"][data-state="enabled"]:hover {
+    /*BACKGROUND*/
+    background: var(--color-tertiary);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+}
+/*--------------------------------*/
+/* Action(enabled): Active */
+/*--------------------------------*/
+button[class*="--action"][data-state="enabled"]:active {
+    /*BACKGROUND*/
+    background: var(--color-tertiary);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-inset);
+}
+/*--------------------------------*/
+/* Action(disabled): */
+/*--------------------------------*/
+button[class*="--action"][data-state="disabled"] {
+    cursor: default;
+    /*BACKGROUND*/
+    background: var(--color-secondaryDim);
+    /*BORDER*/
+    border: 2px solid var(--color-strokeDim);
+    border-radius: 8px;
+    /*TEXT*/
+    color: var(--color-strokeDim);
+    /*DEBUGGING*/
+}

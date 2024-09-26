@@ -1,0 +1,123 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Alert */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Alert: */
+/*--------------------------------*/
+div[class^="alert"] {
+    /*POSITION*/
+    z-index: 10;
+    position: absolute;
+    /*DISPLAY*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*BACKGROUND*/
+    background: var(--color-error);
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 100%;
+    /*TEXT*/
+    color: var(--color-background);
+    font-size: 12px;
+    font-weight: 600;
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+    /*TRANSFORM*/
+    transform: scale(1.0);
+    opacity: 0.0;
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Alert Hint: */
+/*--------------------------------*/
+.alert--hint {
+    bottom: -12px;
+    left: -12px;
+    width: 24px;
+    height: 24px;
+}
+.alert--hint::after {
+    content: '\0021';
+    /*POSITION*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*DISPLAY*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*--------------------------------*/
+/* Alert Points: */
+/*--------------------------------*/
+.alert--points {
+    bottom: -10px;
+    left: -15px;
+    width: 42px;
+    height: 42px;
+}
+/*--------------------------------*/
+/* Animation: alert - points */
+/*--------------------------------*/
+.ani--alert--points {
+    /*ANIMATION*/
+    animation-name: alert--action;
+    animation-duration: 3s !important;
+    /*DEBUGGING*/
+}
+@keyframes alert--action {
+    0% {
+        transform: scale(0.0);
+        opacity: 1.0;
+    }
+    15% {transform: scale(2.0);}
+    25% {transform: scale(1.0);}
+    30% {transform: rotate(20deg);}
+    40% {transform: rotate(-20deg);}
+    50% {transform: rotate(20deg);}
+    60% {transform: rotate(-20deg);}
+    70% {transform: rotate(20deg);}
+    80% {transform: rotate(-20deg);}
+    85% {
+        opacity: 1.0;
+        transform: rotate(0deg);
+    }
+    100% {opacity: 0.0;}
+}
+/*--------------------------------*/
+/* Animation: alert - hints */
+/*--------------------------------*/
+.ani--alert--hints {
+    /*ANIMATION*/
+    animation-name: alert--hint;
+    animation-duration: 0.75s !important;
+    animation-iteration-count: infinite !important;
+    /*TRANSFORM*/
+    opacity: 1.0 !important;
+    /*DEBUGGING*/
+}
+@keyframes alert--hint {
+    0% {transform: rotate(20deg);}
+    50% {transform: rotate(-20deg);}
+    100% {transform: rotate(20deg);}
+}
+
+/*--------------------------------*/
+/* Template: */
+/*--------------------------------*/
+    /*GRID*/
+    /*FLEX*/
+    /*VARS*/
+    /*POSITION*/
+    /*DISPLAY*/
+    /*BACKGROUND*/
+    /*BORDER*/
+    /*TEXT*/
+    /*SHADOW*/
+    /*TRANSITION*/
+    /*ANIMATION*/
+    /*TRANSFORM*/
+    /*DEBUGGING*/

@@ -1,0 +1,54 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Dots */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Dots: */
+/*--------------------------------*/
+.dot {
+    /*POSITION*/
+    width: 48px;
+    height: 48px;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*BORDER*/
+    border: 2px solid var(--color-stroke);
+    border-radius: 100%;
+    /*TEXT*/
+    font-size: 20px;
+    font-weight: 600;
+}
+/*--------------------------------*/
+/* Dot:active */
+/*--------------------------------*/
+.dot[data-active="true"] {
+    /*BACKGROUND*/
+    background: var(--color-primary);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-inset);
+}
+/*--------------------------------*/
+/* Dot:inactive */
+/*--------------------------------*/
+.dot[data-active="false"] {
+    /*BACKGROUND*/
+    background: var(--color-secondary);
+}
+/*--------------------------------*/
+/* Template: */
+/*--------------------------------*/
+    /*GRID*/
+    /*FLEX*/
+    /*VARS*/
+    /*POSITION*/
+    /*DISPLAY*/
+    /*BACKGROUND*/
+    /*BORDER*/
+    /*TEXT*/
+    /*SHADOW*/
+    /*TRANSITION*/
+    /*ANIMATION*/
+    /*TRANSFORM*/
+    /*DEBUGGING*/

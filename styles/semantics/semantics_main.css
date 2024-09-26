@@ -1,0 +1,95 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Semantics - Main */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Semantics: Header */
+/*--------------------------------*/
+header, main, footer {
+    /*GRID*/
+    grid-column: 1;
+    /*BORDER*/
+    border-left: var(--ui-border);
+    border-right: var(--ui-border);
+}
+/*--------------------------------*/
+/* Semantics: Header */
+/*--------------------------------*/
+header {
+    /*GRID*/
+    grid-row: 1;
+}
+/*--------------------------------*/
+/* Semantics: Nav */
+/*--------------------------------*/
+nav {
+    /*POSITION*/
+    padding: 0 24px;
+    width: 100%;
+    height: 56px;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /*BACKGROUND*/
+    background: var(--color-secondary);
+}
+/*--------------------------------*/
+/* Nav: spacer */
+/*--------------------------------*/
+.nav__spacer {
+    /*POSITION*/
+    z-index: 5;
+    position: relative;
+    width: 85px;
+    height: 100%;
+}
+/*--------------------------------*/
+/* Semantics: Footer */
+/*--------------------------------*/
+footer {
+    /*GRID*/
+    grid-row: 3;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*TEXT*/
+    font-size: 10px;
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Semantics: Main */
+/*--------------------------------*/
+main {
+    /*GRID*/
+    grid-row: 2;
+    /*POSITION*/
+    padding: 0 24px;
+    width: 100%;
+    height: 100%;
+}
+/*--------------------------------*/
+/* Semantics: Aside */
+/*--------------------------------*/
+aside {
+    /*DEBUGGING*/
+    display: none;
+}
+/*--------------------------------*/
+/* Template: */
+/*--------------------------------*/
+    /*GRID*/
+    /*FLEX*/
+    /*VARS*/
+    /*POSITION*/
+    /*DISPLAY*/
+    /*BACKGROUND*/
+    /*BORDER*/
+    /*TEXT*/
+    /*SHADOW*/
+    /*TRANSITION*/
+    /*ANIMATION*/
+    /*TRANSFORM*/
+    /*DEBUGGING*/

@@ -1,0 +1,86 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Tooltip */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Tooltip: */
+/*--------------------------------*/
+.tooltip {
+    /*POSITION*/
+    z-index: 20;
+    position: absolute;
+    top: calc(100% + 24px);
+    left: calc(50% - 100px);
+    width: 200px;
+    height: auto;
+    padding: 12px 18px 12px 12px;
+    /*DISPLAY*/
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    /*BACKGROUND*/
+    background: var(--color-primaryContainer);
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 8px;
+    /*TEXT*/
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Tooltip: close */
+/*--------------------------------*/
+.tooltip::before {
+    content: '\2716';
+    /*POSITION*/
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 2px;
+    /*DISPLAY*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*TEXT*/
+    font-weight: 600;
+    /*DEBUGGING*/
+}
+.tooltip:hover::before {color: var(--color-error);}
+/*--------------------------------*/
+/* Tooltip: arrow */
+/*--------------------------------*/
+.tooltip::after {
+    content: '';
+    /*POSITION*/
+    position: absolute;
+    top: -24px;
+    left: calc(50%);
+    margin-left: -12px;
+    /*BORDER*/
+    border: 12px solid var(--color-stroke);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    /*TRANSFORM*/
+    transform: rotate(180deg);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template: */
+/*--------------------------------*/
+    /*GRID*/
+    /*FLEX*/
+    /*VARS*/
+    /*POSITION*/
+    /*DISPLAY*/
+    /*BACKGROUND*/
+    /*BORDER*/
+    /*TEXT*/
+    /*SHADOW*/
+    /*TRANSITION*/
+    /*ANIMATION*/
+    /*TRANSFORM*/
+    /*DEBUGGING*/

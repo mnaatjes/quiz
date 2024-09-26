@@ -1,0 +1,79 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Buttons - Nav */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Nav: */
+/*--------------------------------*/
+a[class*="--nav"],
+button[class*="--nav"] {
+    /*POSITION*/
+    position: relative;
+    width: 48px;
+    height: 48px;
+    /*BACKGROUND*/
+    background: var(--color-primary);
+    /*BORDER*/
+    border: 2px solid var(--color-primary);
+    border-radius: 100%;
+}
+/*--------------------------------*/
+/* Nav: icon */
+/*--------------------------------*/ 
+a[class*="--nav"] i,
+button[class*="--nav"] i {
+    /*TEXT*/
+    font-size: 18px;
+}
+/*--------------------------------*/
+/* Nav(Enabled): info: */
+/*--------------------------------*/ 
+a[class*="--nav--info"][data-state="enabled"],
+button[class*="--nav--info"][data-state="enabled"] {
+    cursor: help;
+}
+/*--------------------------------*/
+/* Nav(Enabled): Hover */
+/*--------------------------------*/
+a[class*="--nav"][data-state="enabled"]:hover,
+button[class*="--nav"][data-state="enabled"]:hover {
+    /*BORDER*/
+    border: 2px solid var(--color-stroke);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+}
+/*--------------------------------*/
+/* Nav(Enabled): Active */
+/*--------------------------------*/
+a[class*="--nav"][data-state="enabled"]:active,
+button[class*="--nav"][data-state="enabled"]:active {
+    /*BORDER*/
+    border: 2px solid var(--color-stroke);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-inset);
+}
+/*--------------------------------*/
+/* Nav(Active): */
+/*--------------------------------*/
+button[class*="--nav"][data-state="active"] {
+    cursor: default;
+    /*BORDER*/
+    border: 2px solid var(--color-stroke);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-inset);
+}
+/*--------------------------------*/
+/* Nav(Disabled): */
+/*--------------------------------*/ 
+a[class*="--nav"][data-state="disabled"],
+button[class*="--nav"][data-state="disabled"],
+a[class*="--nav--info"][data-state="disabled"],
+button[class*="--nav--info"][data-state="disabled"] {
+    cursor: default;
+    /*BACKGROUND*/
+    background: var(--color-primaryContainer);
+    /*BORDER*/
+    border: 2px solid var(--color-strokeDim);
+    /*TEXT*/
+    color: var(--color-strokeDim);
+    /*DEBUGGING*/
+}

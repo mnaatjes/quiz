@@ -1,0 +1,63 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Semantics - Dashboard */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Semantics: Main - dashboard */
+/*--------------------------------*/
+main[class*="--dashboard"] {
+    /*DISPLAY*/
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(100px, 1fr) 1fr 2fr;
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Section: */
+/*--------------------------------*/
+section[class*="--dashboard__logo"] {
+    /*GRID*/
+    grid-column: 1;
+    grid-row: 1;
+    /*POSITION*/
+    width: 100%;
+    height: 100%;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section[class*="--dashboard__logo"] img {
+    /*POSITION*/
+    object-fit: contain;
+    height: 100%;
+}
+/*--------------------------------*/
+/* Section: */
+/*--------------------------------*/
+section[class*="--dashboard__header"] {
+    /*GRID*/
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+    align-self: start;
+    /*TEXT*/
+    text-align: center;
+}
+section[class*="--dashboard__header"] h3 {font-weight: 600;}
+/*--------------------------------*/
+/* Section: */
+/*--------------------------------*/
+section[class*="--dashboard__nav"] {
+    /*GRID*/
+    grid-column: 1;
+    grid-row: 3;
+    /*POSITION*/
+    width: 100%;
+    height: 100%;
+    /*DISPLAY*/
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}

@@ -1,0 +1,166 @@
+/*---------------------------------------------------------------*/
+/* Splash: Quiz */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Imports: Font */
+/*--------------------------------*/
+/*--------------------------------*/
+/* Imports: Semantics */
+/*--------------------------------*/
+@import url(semantics/semantics_main.css);
+@import url(semantics/semantics_splash.css);
+@import url(semantics/semantics_dashboard.css);
+@import url(semantics/semantics_quiz.css);
+@import url(semantics/semantics_landing.css);
+/*--------------------------------*/
+/* Imports: Resets - Buttons */
+/*--------------------------------*/
+@import url(resets/resets_buttons/buttons_main.css);
+@import url(resets/resets_buttons/buttons_action.css);
+@import url(resets/resets_buttons/buttons_dashboard.css);
+@import url(resets/resets_buttons/buttons_nav.css);
+@import url(resets/resets_buttons/buttons_submit.css);
+@import url(resets/resets_buttons/buttons_user.css);
+@import url(resets/resets_buttons/buttons_landing.css);
+/*--------------------------------*/
+/* Imports: Resets */
+/*--------------------------------*/
+@import url(resets/resets_ul_a.css);
+@import url(resets/resets_input.css);
+@import url(resets/resets_radio.css);
+@import url(resets/resets_small.css);
+/*--------------------------------*/
+/* Elements */
+/*--------------------------------*/
+@import url(elements/score.css);
+@import url(elements/dots.css);
+@import url(elements/alert.css);
+@import url(elements/tooltip.css);
+/*--------------------------------*/
+/* Media Queries */
+/*--------------------------------*/
+@import url(media_queries/media_query_phone.css) screen and (min-width: 0px) and (max-width: 600px);
+/*--------------------------------*/
+/* Root */
+/*--------------------------------*/ 
+:root {
+    /*DEBUGGING*/
+    /*--debug-border: 1px solid red;*/
+    --debug-border: 1px solid red;
+    --debug-bkrnd: rgba(255, 0, 0, 0.4);
+
+    /*COLORS*/
+    --color-background: #FFFFFE;
+    --color-stroke: #272343;
+    --color-strokeDim: #D4D3D9;
+    --color-primary: #FFD803;
+    --color-onPrimary: #272343;
+    --color-primaryContainer: #FFF7CD;
+    --color-secondary: #E3F6F5;
+    --color-secondaryDim: #EEFAF9;
+    --color-tertiary: #BAE8E8;
+    --color-error: #FF0353;
+    --color-errorContainer: #FFE6EE;
+    --color-confirm: #29FF03;
+    --color-confirmContainer: #D4FFCD;
+
+    /*UI: POSITION*/
+    --ui-padding: 12px;
+    /*UI: BORDER*/
+    --ui-border: 2px solid var(--color-stroke);
+    --ui-border-radius: 8px;
+    /*UI: FONT*/
+    --ui-font-family: Arial, Helvetica, sans-serif;
+    --ui-font-color: var(--color-stroke);
+    --ui-font-size: 16px;
+    /*UI: SHADOW*/
+    --ui-shadow-off: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
+    --ui-shadow-on: 0px 2px 1px 1px rgba(0, 0, 0, 0.4);
+    --ui-shadow-inset: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+    /*UI: TRANSITIONS*/
+    --ui-transition: all 0.45s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    /*ANIMATIONS*/
+    --start_pos: 0%;
+    --end_pos: -100%;
+}
+/*--------------------------------*/
+/* Overall */
+/*--------------------------------*/        
+* {
+    /*POSITION*/
+    margin: 0;
+    padding: 0;
+    /*DISPLAY*/
+    box-sizing: border-box;
+}
+/*--------------------------------*/
+/* Body */
+/*--------------------------------*/
+body {
+    /*POSITION*/
+    width: 100vw;
+    height: 100vh;
+    /*DISPLAY*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*TEXT*/
+    font-family: var(--ui-font-family);
+    font-size: var(--ui-font-size);
+    font-weight: normal;
+    color: var(--color-stroke);
+}
+/*--------------------------------*/
+/* Wrapper */
+/*--------------------------------*/
+.wrapper__grid {
+    width: 100%;
+    height: 100%;
+    /*DISPLAY*/
+    display: grid;
+    grid-template-columns: minmax(360px, 600px);
+    grid-template-rows: 93px calc(100% - 127px) 34px;
+    justify-content: center;
+}
+/*--------------------------------*/
+/* Animation: */
+/*--------------------------------*/
+div[class*="ani--"],
+article[class*="ani--"] {
+    /*ANIMATION*/
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-duration: 0.95s;
+}
+.ani--advance-slide {
+    animation-name: advance-slide;
+}
+
+@keyframes advance-slide {
+    0% {transform: translateX(var(--start_pos));}
+    100% {transform: translateX(var(--end_pos));}
+}
+.paused {animation-play-state: paused;}
+/*---------------------------------------------------------------*/
+/* Template: */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+    /*GRID*/
+    /*FLEX*/
+    /*VARS*/
+    /*POSITION*/
+    /*DISPLAY*/
+    /*BACKGROUND*/
+    /*BORDER*/
+    /*TEXT*/
+    /*SHADOW*/
+    /*TRANSITION*/
+    /*ANIMATION*/
+    /*TRANSFORM*/
+    /*DEBUGGING*/

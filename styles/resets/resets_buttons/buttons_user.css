@@ -1,0 +1,104 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Buttons - User */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Nav: user */
+/*--------------------------------*/
+button[class*="--user"] {
+    /*POSITION*/
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 85px;
+    height: 85px;
+    /*DISPLAY*/
+    /*BORDER*/
+    border-radius: 100%;
+}
+/*--------------------------------*/
+/* Nav: User(Hidden) */
+/*--------------------------------*/
+button[class*="--user"][data-state="hidden"] {display: none;}
+/*--------------------------------*/
+/* Nav: User(Enabled) */
+/*--------------------------------*/
+button[class*="--user"][data-state="enabled"] {
+    cursor: pointer;
+    /*BACKGROUND*/
+    background: var(--color-primary);
+    /*BORDER*/
+    border: 2px solid var(--color-primary);
+}
+/*--------------------------------*/
+/* Nav: User(Disabled) */
+/*--------------------------------*/
+button[class*="--user"][data-state="disabled"] {
+    cursor: default;
+    /*BACKGROUND*/
+    background: var(--color-primaryContainer);
+    /*BORDER*/
+    border: 2px solid var(--color-strokeDim);
+}
+/*--------------------------------*/
+/* Nav: User - icon: */
+/*--------------------------------*/ 
+button[class*="--user"] i {
+    /*TEXT*/
+    font-size: 36px;
+}
+button[class*="--user"][data-state="enabled"] i {color: var(--color-stroke);}
+button[class*="--user"][data-state="disabled"] i {color: var(--color-strokeDim);}
+/*--------------------------------*/
+/* Nav: User(Enabled) - hover */
+/*--------------------------------*/
+button[class*="--user"][data-state="enabled"]:hover {
+    /*BORDER*/
+    border: 2px solid var(--color-stroke);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+}
+/*--------------------------------*/
+/* Nav: User(Enabled) - active */
+/*--------------------------------*/
+button[class*="--user"][data-state="enabled"]:active {
+    /*BORDER*/
+    border: 2px solid var(--color-stroke);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-inset);
+}
+/*--------------------------------*/
+/* Nav: User - info: */
+/*--------------------------------*/
+button[class*="--user"][data-state="enabled"] span {
+    /*POSITION*/
+    z-index: -1;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 6px 30px 6px 6px;
+    /*DISPLAY*/
+    display: block;
+    /*BACKGROUND*/
+    background: var(--color-error);
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 4px;
+    /*TEXT*/
+    color: var(--color-background);
+    font-size: 12px;
+    font-weight: 600;
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+    /*TRANSITION*/
+    transition: var(--ui-transition);
+    /*TRANSFORM*/
+    opacity: 0.0;
+    transform: translateX(-15px);
+    /*DEBUGGING*/
+}
+
+button[class*="--user"][data-state="enabled"]:hover span {
+    /*TRANSFORM*/
+    opacity: 1.0;
+    transform: translateX(-50px);
+}

@@ -1,0 +1,29 @@
+/*---------------------------------------------------------------*/
+/* Template: Media Queries: Tablet  */
+/*---------------------------------------------------------------*/
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    /*--------------------------------*/
+    /* Semantics: Header */
+    /*--------------------------------*/
+    header, main, footer {
+        /*BORDER*/
+        border-left: none;
+        border-right: none;
+    }
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+    /*GRID*/
+    /*FLEX*/
+    /*VARS*/
+    /*POSITION*/
+    /*DISPLAY*/
+    /*BACKGROUND*/
+    /*BORDER*/
+    /*TEXT*/
+    /*SHADOW*/
+    /*TRANSITION*/
+    /*ANIMATION*/
+    /*TRANSFORM*/
+    /*DEBUGGING*/

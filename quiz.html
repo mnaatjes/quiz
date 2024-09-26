@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!--w3 Fonts -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--Font Awesome Update-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!--Main CSS Document-->
+    <link rel="stylesheet" href="styles/main.css">
+    <head>
+        <title>CIS174: Quiz - Questions</title>
+    </head>
+    <body>
+        <!--Grid Start-->
+        <div class="wrapper__grid">
+            <!--Header Start-->
+            <header>
+                <nav>
+                    <button id="btn_home" href="dashboard.html" class="btn--nav" data-state="enabled">
+                        <i class="fa fa-home"></i>
+                        <div class="tooltip"></div>
+                    </button>
+                    <button id="btn_info" class="btn--nav--info" data-state="enabled">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <div class="alert--hint"></div>
+                        <div class="tooltip"></div>
+                    </button>
+                    <button id="btn_help" class="btn--nav" data-state="enabled">
+                        <i class="fas fa-bolt"></i>
+                        <div class="alert--hint"></div>
+                        <div class="tooltip"></div>
+                    </button>
+                    <div class="nav__spacer">
+                        <button id="btn_user" href="user.html" class="btn--user" data-state="enabled">
+                            <i class="fa-regular fa-user"></i>
+                            <span></span>
+                        </button>
+                        <div id="ele_score" class="score__container" data-state="enabled">
+                            <div class="score">Score:<span id="scoreboard">0</span></div>
+                            <div id="alert_points" class="alert--points">&plus;10&excl;</div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <!--Header End-->
+            <!--Main Start-->
+                <main class="main--question">
+                    <section id="dot-container" class="section--question__dots">
+                        <!--
+                        <div id="dot-0" class="dot" data-active="true">1</div>
+                        <div id="dot-1" class="dot" data-active="false">2</div>
+                        <div id="dot-2" class="dot" data-active="false">3</div>
+                        <div id="dot-3" class="dot" data-active="false">4</div>
+                        <div id="dot-4" class="dot" data-active="false">5</div>
+                        <div id="dot-5" class="dot" data-active="false">6</div>
+                        -->
+                    </section>
+                    <section class="section--questions__wrapper">
+                        <article id="question-carousel" class="article--questions__slides__container" data-index="0">
+                            <!--
+                            <div id="question-1" class="slide">
+                                <div class="slide__question__container">
+                                    <div class="question__body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ducimus optio dolor?
+                                    </div>
+                                    <div class="question__icon">
+                                        <i class="fa-solid fa-globe"></i>
+                                    </div>
+                                    <div class="question__timer">
+                                        <div class="question__timer__counter">30</div>
+                                    </div>
+                                </div>
+                                <div class="slide__answer__container">
+                                    <div class="radio__container" data-result="none">
+                                        <input type="radio">
+                                        <span></span>
+                                        <label for="">Soviet Union</label>
+                                    </div>
+                                    <div class="radio__container" data-result="none">
+                                        <input type="radio">
+                                        <span></span>
+                                        <label for="">Soviet Union</label>
+                                    </div>
+                                    <div class="radio__container" data-result="true">
+                                        <input type="radio">
+                                        <span></span>
+                                        <label for="">Soviet Union</label>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+                        </article>
+                    </section>
+                    <form id="form_quiz" class="--question__buttons" action="landing.html" method="GET" onsubmit="validateQuiz()">
+                        <button id="btn_skip" data-state="enabled" class="btn--action" type="button">
+                            Skip
+                            <i class="fas fa-fast-forward"></i>
+                        </button>
+                        <button id="btn_next" data-state="enabled" class="btn--action" type="button">
+                            Next
+                            <i class="fa-solid fa-circle-arrow-right"></i>
+                        </button>                        
+                        <input type="hidden" name="username" value="">
+                        <input type="hidden" name="score" value="">
+                        <input type="hidden" name="category" value="">
+                        <button id="btn_submit" type="submit" class="btn--submit" data-state="hidden">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            Submit Quiz
+                        </button>
+                        </form>
+                    </section>
+                </main>
+            <!--Main End-->
+            <!--Footer Start-->
+            <footer>
+                <a href="">Terms of Service</a>
+                <span>&copy;Michael Naatjes</span>
+            </footer>
+            <!--Footer End-->
+        </div>
+        <!--Grid End-->
+    </body>
+    <script src="scripts/js/functions_main.js" type="text/Javascript"></script>
+    <script src="scripts/js/constructor_alerts.js" type="text/Javascript"></script>
+    <script src="scripts/js/constructor_tooltip.js" type="text/Javascript"></script>
+    <script src="scripts/js/class_button.js" type="text/Javascript"></script>
+    <script src="scripts/js/class_button_answer.js" type="text/Javascript"></script>
+    <script src="scripts/js/class_button_nav.js" type="text/Javascript"></script>
+    <script src="scripts/js/class_slide.js" type="text/Javascript"></script>
+    <script src="scripts/js/class_quiz.js" type="text/Javascript"></script>
+    <script src="scripts/js/implementation_quiz.js" type="text/Javascript"></script>
+</html>
