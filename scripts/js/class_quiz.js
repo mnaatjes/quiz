@@ -44,8 +44,6 @@ class Quiz {
         
         // hide submit button
         this.btn_submit.hide();
-        // load quiz from JSON file
-        this.loadQuiz();
         // build quiz from local storage
         this.buildQuiz();
         // gather and define slide objects
@@ -327,12 +325,34 @@ class Quiz {
     }
     /*------------------------------------------------------*/
     /**
+     * @name fetchQuiz
+     * @type {async method}
+     * @memberof QuizApp
+     * @description loads JSON quiz data
+     */
+    /*------------------------------------------------------*/
+    fetchQuiz(){
+        fetchJSON('scripts/JSON/quiz.json', (response) => {
+            // properties
+            let quiz_data = response.quizzes;
+            // loop quiz data
+            quiz_data.forEach(quiz_obj => {
+                // select by matching category
+                if(quiz_obj.quiz == this.category){
+                    let quiz_item = quiz_obj.questions;
+                    //console.log(quiz_item);
+                }
+            });
+        });
+    }
+    /*------------------------------------------------------*/
+    /**
      * @name loadQuiz
      * @type {Function}
      */
     /*------------------------------------------------------*/
     loadQuiz(){
-        fetchJSON('scripts/JSON/quiz.json', (xhttp) => {
+        ajaxJSON('scripts/JSON/quiz.json', (xhttp) => {
             let temp_arr        = JSON.parse(xhttp.responseText).quizzes;
             let temp_quiz       = {};
             // capture quiz information
@@ -342,7 +362,7 @@ class Quiz {
                 }
             });
             // upload to local storage
-            localStorage.setItem(this.storage_quiz, JSON.stringify(temp_quiz));
+            localStorage.setItem('QUIZ', JSON.stringify(temp_quiz));
         });
     };
     /*------------------------------------------------------*/
@@ -352,8 +372,11 @@ class Quiz {
      */
     /*------------------------------------------------------*/
     buildQuiz(){
-        let temp_quiz = JSON.parse(localStorage.getItem(this.storage_quiz));
+        console.log(localStorage);
+        let temp_quiz = localStorage.getItem('QUIZ');
+        temp_quiz = JSON.parse(temp_quiz);
         // build quiz
+        console.log(temp_quiz);
         for(let i = 0; i < temp_quiz.length; i++){
             let slide_index = i;
             let quiz_item   = temp_quiz[slide_index];
@@ -362,7 +385,7 @@ class Quiz {
             this.max_score += quiz_item.points;
         }
         // remove quiz from local storage
-        localStorage.removeItem(this.storage_quiz);
+        //localStorage.removeItem('QUIZ');
     };
     /*------------------------------------------------------*/
     /**

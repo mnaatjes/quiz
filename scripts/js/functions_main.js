@@ -82,13 +82,13 @@ function includeHTML(filetype) {
 }
 /*------------------------------------------------------*/
 /***
- * @name fetchJSON
- * @example fetchJSON('json/fleet.json', (xhttp) => {
+ * @name ajaxJSON
+ * @example ajaxJSON('json/fleet.json', (xhttp) => {
  *      sessionStorage.setItem('fleet', xhttp.responseText);
  *  });
  */
 /*------------------------------------------------------*/
-function fetchJSON(filepath, callback) {
+function ajaxJSON(filepath, callback) {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
@@ -141,4 +141,30 @@ function getValuesFromArray(objects_arr){
         result.push(value);
     }
     return result;
+}
+/*------------------------------------------------------*/
+/**
+ * @name fetchJSON
+ * @type {Async Function}
+ * @memberof MyApp
+ * @param {String} filepath relative path to file
+ * @param {callback} callback
+ * @example fetchJSON('path/to/file.json, function(json){console.log(json)})
+ * @returns {Object} JSON data
+ */
+/*------------------------------------------------------*/
+async function fetchJSON(filepath, callback){
+    try{
+        let response = await fetch(filepath);
+        // if failure
+        if(!response.ok){
+            throw new Error(`Response status: ${response.status}`);
+        }
+        // return JSON
+        let json = await response.json();
+        // run callback function
+        callback(json);
+    } catch (error){
+        console.error('Ooopsie!');
+    }
 }

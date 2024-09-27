@@ -5,11 +5,26 @@
  * @namespace QuizApp
  * @description Implementation js page for entire application
  */
+// import test
+/*
+async function getJSON(filepath){
+    try{
+        let response = await fetch(filepath);
+        // if failure
+        if(!response.ok){
+            throw new Error(`Response status: ${response.status}`);
+        }
+        let json = await response.json();
+        console.log(json);
+    } catch (error){
+        console.error('Ooopsie!');
+    }
+}
+*/
 // url properties
 let query_string    = window.location.search;
 let url_params      = new URLSearchParams(query_string);
 let username        = url_params.get('username');
-let category        = url_params.get('category');
 // nav properties
 let page      = window.location.pathname.split('/').pop();
 let btn_home  = new NavButton('btn_home', page);
@@ -75,17 +90,47 @@ else if(page == 'dashboard.html'){
     function categorySelect(btn){
         // build href
         let href = btn.getAttribute('href') + `&username=${username}`;
+        let category = btn.getAttribute('data-category');
+        // load quiz
+        /*
+        ajaxJSON('scripts/JSON/quiz.json', (xhttp) => {
+            let temp_arr        = JSON.parse(xhttp.responseText).quizzes;
+            let temp_quiz       = {};
+            // capture quiz information
+            temp_arr.forEach(quiz_obj => {
+                if(quiz_obj.quiz == category){
+                    temp_quiz = quiz_obj.questions;
+                }
+            });
+            // upload to local storage
+            localStorage.setItem('QUIZ', JSON.stringify(temp_quiz));
+        });
+        */
+        fetchJSON('scripts/JSON/quiz.json', (json) => {
+            json.quizzes.forEach(quiz_item => {
+                if(quiz_item.quiz == category){
+                    localStorage.setItem('QUIZ', JSON.stringify(quiz_item));
+                }
+            });
+        });
+        //console.log(localStorage.getItem('QUIZ'));
         // execute link
         window.location.href = href;
     }
 }
 // build quiz if on page
 else if(page == 'quiz.html'){
-    // quiz properties
-    let carousel    = document.getElementById('question-carousel');
-    let index       = parseInt(carousel.getAttribute('data-index'));
-    let quiz        = new Quiz(carousel, index, category, btn_info, btn_help);
-    console.log(quiz.storage_quiz == category);
+
+    function onLoadQuiz(){
+        // quiz properties
+        console.log(localStorage.getItem('QUIZ'));
+        let carousel    = document.getElementById('question-carousel');
+        let index       = parseInt(carousel.getAttribute('data-index'));
+        let category    = url_params.get('category');
+        let quiz        = new Quiz(carousel, index, category, btn_info, btn_help);
+    };
+
+    window.addEventListener('load', onLoadQuiz());
     /**
      * @name validateQuiz
      * @type {FormDataEvent}
@@ -186,5 +231,4 @@ else if(page == 'landing.html'){
 
 // debugging
 // TODO: Local storage chain of custody
-//localStorage.clear();
 console.log(localStorage);
