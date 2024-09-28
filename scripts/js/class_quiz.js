@@ -44,16 +44,24 @@ class Quiz {
         
         // hide submit button
         this.btn_submit.hide();
+        // present loader
+        let loader = document.getElementById('loader');
+        loader.style.display = 'flex';
         // build quiz from local storage
-        this.buildQuiz();
-        // gather and define slide objects
-        this.getSlides();
-        // update current slide
-        this.updateSlide();
-        // disable next button
-        this.btn_next.disable();
-        // start quiz
-        this.playQuiz(true);
+        this.fetchQuiz();
+        // loader timer
+        let loader_timer = setTimeout(() => {
+            // gather and define slide objects
+            this.getSlides();
+            // update current slide
+            this.updateSlide();
+            // disable next button
+            this.btn_next.disable();
+            // delete loader
+            loader.style.display = 'none';
+            // start quiz
+            this.playQuiz(true);
+        }, 5000);
     }
     /*------------------------------------------------------*/
     /**
@@ -89,7 +97,6 @@ class Quiz {
         });
         // start timer
         this.startTimer();
-        //console.log(this.slide);
     }
     /*------------------------------------------------------*/
     /**
@@ -339,8 +346,7 @@ class Quiz {
             quiz_data.forEach(quiz_obj => {
                 // select by matching category
                 if(quiz_obj.quiz == this.category){
-                    let quiz_item = quiz_obj.questions;
-                    //console.log(quiz_item);
+                    this.buildQuiz(quiz_obj.questions);
                 }
             });
         });
@@ -361,8 +367,6 @@ class Quiz {
                     temp_quiz = quiz_obj.questions;
                 }
             });
-            // upload to local storage
-            localStorage.setItem('QUIZ', JSON.stringify(temp_quiz));
         });
     };
     /*------------------------------------------------------*/
@@ -371,12 +375,8 @@ class Quiz {
      * @type {Function}
      */
     /*------------------------------------------------------*/
-    buildQuiz(){
-        console.log(localStorage);
-        let temp_quiz = localStorage.getItem('QUIZ');
-        temp_quiz = JSON.parse(temp_quiz);
+    buildQuiz(temp_quiz){
         // build quiz
-        console.log(temp_quiz);
         for(let i = 0; i < temp_quiz.length; i++){
             let slide_index = i;
             let quiz_item   = temp_quiz[slide_index];
@@ -384,8 +384,6 @@ class Quiz {
             // add up total points
             this.max_score += quiz_item.points;
         }
-        // remove quiz from local storage
-        //localStorage.removeItem('QUIZ');
     };
     /*------------------------------------------------------*/
     /**
@@ -442,8 +440,6 @@ class Quiz {
         if(flag == true){
             // add score
             this.score += this.slide.points;
-            console.log(this.score);
-            console.log(this.slide.points);
             // animate button score with delay
             this.ele_score.alert.animateAlert(`+${this.slide.points}!`);
             // wait for animation to end
@@ -526,11 +522,9 @@ class Quiz {
                 this.btn_help.alert.removeAlertAnimation();
                 this.btn_help.tooltip.hideHint();
                 // remove event listeners
-                // TODO: listener_help_hover not defined
-                // TODO: Hint helper function not executing
-                this.btn_help.node.removeEventListener('mouseover', listener_help_hover);
-                this.btn_help.node.removeEventListener('click', listener_help_click);
-                this.btn_help.node.removeEventListener('mouseout', listener_help_exit);
+                this.btn_help.node.removeEventListener('mouseover', this.listener_help_hover);
+                this.btn_help.node.removeEventListener('click', this.listener_help_click);
+                this.btn_help.node.removeEventListener('mouseout', this.listener_help_exit);
                 // execute helper code
                 let flag = false;
                 this.slide.answers.forEach((btn_answer, index) => {

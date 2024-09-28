@@ -63,7 +63,7 @@ class NavButton extends Button {
                     this.enable();
             }
         // dashboard page & landing page
-        } else if(this.page == 'dashboard.html' || this.page == 'landing.html'){
+        } else if(this.page == 'dashboard.html' || this.page == 'landing.html' || this.page == 'user.html'){
             switch (this.id){
                 // info button
                 case 'btn_info':

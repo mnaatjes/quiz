@@ -12,6 +12,7 @@
 @import url(semantics/semantics_dashboard.css);
 @import url(semantics/semantics_quiz.css);
 @import url(semantics/semantics_landing.css);
+@import url(semantics/semantics_user.css);
 /*--------------------------------*/
 /* Imports: Resets - Buttons */
 /*--------------------------------*/
@@ -32,6 +33,7 @@
 /*--------------------------------*/
 /* Elements */
 /*--------------------------------*/
+@import url(elements/loader.css);
 @import url(elements/score.css);
 @import url(elements/dots.css);
 @import url(elements/alert.css);

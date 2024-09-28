@@ -8,7 +8,7 @@
     <!--Main CSS Document-->
     <link rel="stylesheet" href="styles/main.css">
     <head>
-        <title>CIS174: Quiz - Landing</title>
+        <title>CIS174: Quiz - User</title>
     </head>
     <body>
         <!--Grid Start-->
@@ -44,28 +44,62 @@
             </header>
             <!--Header End-->
             <!--Main Start-->
-            <main class="--landing">
-                <section class="section--landing__header">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <h1 id="feedback">Great Job!</h1>
-                </section>
-                <section class="--landing__chart">
-                    <svg width="146" height="146">
-                        <circle r="65" cx="73" cy="73" class="ani--landing-chart"></circle>
-                    </svg>
-                    <div id="score_percent" class="--landing__chart__center">75%</div>
-                </section>
-                <section class="--landing__nav">
-                    <button id="btn_replay" type="button" href="quiz.html?category=" class="btn--landing" onclick="onClickReplay(this)">
-                        <i class="fa-solid fa-repeat"></i>
-                        Replay Quiz
-                    </button>
-                    <button id="btn_back" type="button" href="dashboard.html?username=" class="btn--landing" onclick="onClickHome(this)">
-                        <i class="fa fa-home"></i>
-                        Back to Dashboard
-                    </button>
-                </section>
-            </main>
+                <main class="--user">
+                    <section class="--user__header">
+                        <h3>Welcome</h3>
+                        <p><b id="user_msg">Username</b>
+                    </section>
+                    <section class="--user__info--header">
+                        <button type="button" class="__info--header__cell">
+                            <div class="header__cell__icon">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <p>Category</p>
+                        </button>
+                        <button type="button" class="__info--header__cell">
+                            <div class="header__cell__icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <p>Last Play</p>
+                        </button>
+                        <button type="button" class="__info--header__cell">
+                            <div class="header__cell__icon">
+                                <i class="fa-solid fa-circle-play"></i>
+                            </div>
+                            <p>Replays</p>
+                        </button>
+                        <button type="button" class="__info--header__cell">
+                            <div class="header__cell__icon">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>Score</p>
+                        </button>
+                    </section>
+                    <section id="info--container" class="--user__info--scoreboard">
+                            <!--
+                            <div class="__info--row__cell--category">
+                                <div class="cell__icon--category">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+                            </div>
+                            <div class="__info--row__cell--center">
+                                <i class="fa-regular fa-clock"></i>
+                                <small>9/24/2024</small>
+                            </div>
+                            <div class="__info--row__cell--center">
+                                <i class="fa-regular fa-circle-play"></i>
+                                <small>12</small>
+                            </div>
+                            <div class="__info--row__cell--last">
+                                <i class="fa-regular fa-star"></i>
+                                <small>1005 / 1750</small>
+                            </div>
+                            -->
+                    </section>
+                    <section class="--user__info--row"></section>
+                    <section class="--user__info--row"></section>
+                    <section class="--user__info--row"></section>
+                </main>
             <!--Main End-->
             <!--Footer Start-->
             <footer>
@@ -84,5 +118,6 @@
     <script src="scripts/js/class_button_nav.js" type="text/Javascript"></script>
     <script src="scripts/js/class_slide.js" type="text/Javascript"></script>
     <script src="scripts/js/class_quiz.js" type="text/Javascript"></script>
+    <script src="scripts/js/class_user.js" type="text/Javascript"></script>
     <script src="scripts/js/implementation_quiz.js" type="text/Javascript"></script>
 </html>

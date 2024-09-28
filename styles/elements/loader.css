@@ -1,0 +1,75 @@
+/*---------------------------------------------------------------*/
+/* Loader: */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* loader */
+/*--------------------------------*/
+.loader__container{
+    /*VARS*/
+    /*POSITION*/
+    z-index: 25;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*DISPLAY*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /*BACKGROUND*/
+    background: rgba(238, 250, 249, 0.7);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* loader */
+/*--------------------------------*/
+.loader {
+    /*VARS*/
+    /*POSITION*/
+    width: 200px;
+    height: 200px;
+    /*DISPLAY*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*BACKGROUND*/
+    background: var(--color-error);
+    /*BORDER*/
+    border: 4px solid var(--color-stroke);
+    border-radius: 100%;
+    /*TEXT*/
+    font-size: 24px;
+    color: var(--color-background);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+    /*ANIMATION*/
+    animation: loading 1.95s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s infinite forwards normal;
+    /*TRANSFORM*/
+    scale: 0.0;
+    opacity: 0.0;
+    /*DEBUGGING*/
+}
+@keyframes loading {
+    0%{scale: 0.0; opacity: 0.0;}
+    25%{scale: 1.0; opacity: 1.0;}
+    50%{scale: 0.5; opacity: 1.0;}
+    75%{scale: 1.0; opacity: 1.0;}
+    100%{scale: 0.0; opacity: 0.0;}
+}
+/*--------------------------------*/
+/* loader */
+/*--------------------------------*/
+    /*GRID*/
+    /*FLEX*/
+    /*VARS*/
+    /*POSITION*/
+    /*DISPLAY*/
+    /*BACKGROUND*/
+    /*BORDER*/
+    /*TEXT*/
+    /*SHADOW*/
+    /*TRANSITION*/
+    /*ANIMATION*/
+    /*TRANSFORM*/
+    /*DEBUGGING*/

@@ -4,7 +4,7 @@
 /*--------------------------------*/
 /* Landing: */
 /*--------------------------------*/
-a[class*="--landing"] {
+button[class*="--landing"] {
     /*POSITION*/
     padding: 12px 0;
     min-width: 150px;
@@ -17,11 +17,11 @@ a[class*="--landing"] {
     /*TEXT*/
     font-size: 24px;
 }
-a[class*="--landing"]:first-child {margin-bottom: 6px;}
+button[class*="--landing"]:first-child {margin-bottom: 6px;}
 /*--------------------------------*/
 /* landing: icon */
 /*--------------------------------*/
-a[class*="--landing"] i {
+button[class*="--landing"] i {
     /*POSITION*/
     padding-right: 12px;
     /*TEXT*/
@@ -30,13 +30,13 @@ a[class*="--landing"] i {
 /*--------------------------------*/
 /* landing: Hover */
 /*--------------------------------*/
-a[class*="--landing"]:hover {
+button[class*="--landing"]:hover {
     /*BACKGROUND*/
     background: var(--color-tertiary);
     /*SHADOW*/
     box-shadow: var(--ui-shadow-on);
 }
-a[class*="--landing"]:hover i {
+button[class*="--landing"]:hover i {
     /*ANIMATION*/
     animation: btn__icon 1.25s ease-in-out infinite;
 }
@@ -44,7 +44,7 @@ a[class*="--landing"]:hover i {
 /*--------------------------------*/
 /* landing: Active */
 /*--------------------------------*/
-a[class*="--landing"]:active {
+button[class*="--landing"]:active {
     /*BACKGROUND*/
     background: var(--color-tertiary);
     /*SHADOW*/

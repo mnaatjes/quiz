@@ -5,6 +5,8 @@
 /* Semantics: Main - question */
 /*--------------------------------*/
 main[class*="--question"] {
+    /*POSITION*/
+    position: relative;
     /*DISPLAY*/
     display: grid;
     grid-template-columns: 100%;

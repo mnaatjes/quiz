@@ -1,0 +1,242 @@
+/*---------------------------------------------------------------*/
+/* Quiz: Semantics - User */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Main --user */
+/*--------------------------------*/
+main[class*="--user"] {
+    /*DISPLAY*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr) 4fr;
+    /*DEBUGGING*/
+}
+/*---------------------------------------------------------------*/
+/* Section: Header */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Section: Header: */
+/*--------------------------------*/
+section[class*="--user__header"] {
+    /*GRID*/
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    align-self: center;
+    /*TEXT*/
+    text-align: center;
+}
+/*--------------------------------*/
+/* --user__info: header */
+/*--------------------------------*/
+section[class*="--user__info--header"] {
+    /*GRID*/
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    /*POSITION*/
+    padding: 24px 0;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /*BACKGROUND*/
+    /*BORDER*/
+    /*TEXT*/
+    /*SHADOW*/
+    /*TRANSITION*/
+    /*ANIMATION*/
+    /*TRANSFORM*/
+    /*DEBUGGING*/
+}
+/*---------------------------------------------------------------*/
+/* Button: Header */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* --user__info: header - cell */
+/*--------------------------------*/
+button[class*="__info--header__cell"] {
+    outline: none;
+    /*VARS*/
+    --icon-size--header: 24px;
+    /*FLEX*/
+    flex: 25%;
+    /*POSITION*/
+    margin: 0 6px;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /*BACKGROUND*/
+    background: var(--color-background);
+    /*BORDER*/
+    border: none;
+    /*TEXT*/
+    color: var(--color-stroke);
+}
+/*--------------------------------*/
+/* header - cell: icon */
+/*--------------------------------*/
+button[class*="__info--header__cell"] div[class$="__icon"] {
+    /*POSITION*/
+    width: calc(var(--icon-size--header) + 24px);
+    height: calc(var(--icon-size--header) + 24px);
+    margin-bottom: 12px;
+    /*DISPLAY*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*BACKGROUND*/
+    background: var(--color-stroke);
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 100%;
+    /*TEXT*/
+    color: var(--color-background);
+    font-size: var(--icon-size--header);
+}
+/*--------------------------------*/
+/* header - cell(hover) */
+/*--------------------------------*/
+button[class*="__info--header__cell"]:hover div[class$="__icon"] {
+    /*BACKGROUND*/
+    background: var(--color-error);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+    /*ANIMATION*/
+    animation: btn__icon 1.95s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s infinite forwards normal;
+}
+button[class*="__info--header__cell"]:hover p {text-decoration: underline;}
+/*--------------------------------*/
+/* header - cell(active) */
+/*--------------------------------*/
+button[class*="__info--header__cell"][data-state="active"] div[class$="__icon"],
+button[class*="__info--header__cell"]:active div[class$="__icon"] {
+    /*BACKGROUND*/
+    background: var(--color-error);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-inset);
+}
+button[class*="__info--header__cell"][data-state="active"] p {text-decoration: underline;}
+button[class*="__info--header__cell"]:active p {text-decoration: underline;}
+/*---------------------------------------------------------------*/
+/* Section: Row */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Section: --user__info: item */
+/*--------------------------------*/
+section[class*="--user__info--scoreboard"] {
+    /*GRID*/
+    grid-column: 1 / span 4;
+    grid-row: 3;
+    /*POSITION*/
+    padding: 24px 0;
+    /*DISPLAY*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+/*--------------------------------*/
+/* article: row */
+/*--------------------------------*/
+article[class*="scoreboard__row"] {
+    /*GRID*/
+    grid-column: 1 / span 4;
+    /*POSITION*/
+    padding: 24px 0;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/*--------------------------------*/
+/* info - cell */
+/*--------------------------------*/
+div[class*="__info--row__cell"] {
+    /*POSITION*/
+    padding: 12px 0;
+    height: 100%;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /*BACKGROUND*/
+    background: var(--color-secondary);
+}
+/*--------------------------------*/
+/* info - cell: category */
+/*--------------------------------*/
+div[class*="__info--row__cell"][class$="--category"] {
+    /*FLEX*/
+    flex: 12.5%;
+    /*POSITION*/
+    position: relative;
+    margin-left: 12.5%;
+    /*BORDER*/
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top: 2px solid var(--color-stroke);
+    border-bottom: 2px solid var(--color-stroke);
+    border-left: 2px solid var(--color-stroke);
+}
+div[class*="__info--row__cell"][class$="--center"] {
+    /*FLEX*/
+    flex: 25%;
+    /*BORDER*/
+    border-radius: none;
+    border-top: 2px solid var(--color-stroke);
+    border-bottom: 2px solid var(--color-stroke);
+}
+div[class*="__info--row__cell"][class$="--last"] {
+    /*FLEX*/
+    flex: 25%;
+    /*BORDER*/
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: 2px solid var(--color-stroke);
+    border-right: 2px solid var(--color-stroke);
+    border-bottom: 2px solid var(--color-stroke);
+}
+/*--------------------------------*/
+/* info - cell: category */
+/*--------------------------------*/
+.cell__icon--category {
+    --icon-size--category: 96px;
+    /*POSITION*/
+    z-index: 5;
+    position: absolute;
+    top: calc(50% - (var(--icon-size--category) * 0.5));
+    left: calc(var(--icon-size--category) * -0.5);
+    width: var(--icon-size--category);
+    height: var(--icon-size--category);
+    /*DISPLAY*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*BACKGROUND*/
+    background: var(--color-primary);
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 100%;
+    /*TEXT*/
+    font-size: calc(var(--icon-size--category) - 32px);
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+}
+/*--------------------------------*/
+/* Template: */
+/*--------------------------------*/
+    /*GRID*/
+    /*FLEX*/
+    /*VARS*/
+    /*POSITION*/
+    /*DISPLAY*/
+    /*BACKGROUND*/
+    /*BORDER*/
+    /*TEXT*/
+    /*SHADOW*/
+    /*TRANSITION*/
+    /*ANIMATION*/
+    /*TRANSFORM*/
+    /*DEBUGGING*/

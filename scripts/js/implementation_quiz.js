@@ -5,26 +5,11 @@
  * @namespace QuizApp
  * @description Implementation js page for entire application
  */
-// import test
-/*
-async function getJSON(filepath){
-    try{
-        let response = await fetch(filepath);
-        // if failure
-        if(!response.ok){
-            throw new Error(`Response status: ${response.status}`);
-        }
-        let json = await response.json();
-        console.log(json);
-    } catch (error){
-        console.error('Ooopsie!');
-    }
-}
-*/
+
 // url properties
 let query_string    = window.location.search;
 let url_params      = new URLSearchParams(query_string);
-let username        = url_params.get('username');
+const username      = url_params.get('username');
 // nav properties
 let page      = window.location.pathname.split('/').pop();
 let btn_home  = new NavButton('btn_home', page);
@@ -38,7 +23,8 @@ btn_user.setUser(username);
 // storage user property
 const storage_user = username;
 // page definitions
-console.log(page);
+//console.log(page);
+//console.log(localStorage.getItem(username));
 // capture category on dashboard
 if (page == ''){
     // clear local storage
@@ -90,54 +76,22 @@ else if(page == 'dashboard.html'){
     function categorySelect(btn){
         // build href
         let href = btn.getAttribute('href') + `&username=${username}`;
-        let category = btn.getAttribute('data-category');
-        // load quiz
-        /*
-        ajaxJSON('scripts/JSON/quiz.json', (xhttp) => {
-            let temp_arr        = JSON.parse(xhttp.responseText).quizzes;
-            let temp_quiz       = {};
-            // capture quiz information
-            temp_arr.forEach(quiz_obj => {
-                if(quiz_obj.quiz == category){
-                    temp_quiz = quiz_obj.questions;
-                }
-            });
-            // upload to local storage
-            localStorage.setItem('QUIZ', JSON.stringify(temp_quiz));
-        });
-        */
-        fetchJSON('scripts/JSON/quiz.json', (json) => {
-            json.quizzes.forEach(quiz_item => {
-                if(quiz_item.quiz == category){
-                    localStorage.setItem('QUIZ', JSON.stringify(quiz_item));
-                }
-            });
-        });
-        //console.log(localStorage.getItem('QUIZ'));
-        // execute link
         window.location.href = href;
     }
 }
 // build quiz if on page
 else if(page == 'quiz.html'){
 
-    function onLoadQuiz(){
-        // quiz properties
-        console.log(localStorage.getItem('QUIZ'));
-        let carousel    = document.getElementById('question-carousel');
-        let index       = parseInt(carousel.getAttribute('data-index'));
-        let category    = url_params.get('category');
-        let quiz        = new Quiz(carousel, index, category, btn_info, btn_help);
-    };
-
-    window.addEventListener('load', onLoadQuiz());
+    // quiz properties
+    let carousel    = document.getElementById('question-carousel');
+    let index       = parseInt(carousel.getAttribute('data-index'));
+    let category    = url_params.get('category');
+    let quiz        = new Quiz(carousel, index, category, btn_info, btn_help);
     /**
      * @name validateQuiz
      * @type {FormDataEvent}
      * @memberof QuizApp
      * @description Collects and validates form data; composes it into object and saves it
-     *  to localStorage; clears local storage of quiz data
-     * TODO: Ensure all data in quizdata.json is valid and filled in
      */
     function validateQuiz(){
         // get and set form variables
@@ -148,14 +102,14 @@ else if(page == 'quiz.html'){
         form.elements['max_score'].value    = quiz.max_score;
         form.elements['category'].value     = category;
         // create user object to store data
-        let date = new Date();
-        let user_obj = {
+        let user_obj    = {
             username: username,
             quizzes: [
                 {
                     category: category,
                     score: quiz.score,
-                    timestamp: date.toLocaleString()
+                    max_score: quiz.max_score,
+                    timestamp: new Date().getTime()
                 }
             ]
         }
@@ -182,9 +136,7 @@ else if(page == 'quiz.html'){
 } 
 // landing page
 else if(page == 'landing.html'){
-    // TODO: Quiz data still in local storage!!!
     console.log(localStorage);
-    // TODO: Landing.html bottom buttons need to be connected
     /**
      * @name initLandingPage
      * @type {Function}
@@ -227,8 +179,33 @@ else if(page == 'landing.html'){
     // buttons
     let replay  = new Button('btn_replay');
     let back    = new Button('btn_back');
+    /**
+     * @name onClickReplay
+     * @type {Function}
+     * @listens btn_replay#click
+     * @memberof QuizApp
+     * @description redirects to previous quiz
+     */
+    function onClickReplay(btn){
+        let href = btn.getAttribute('href') + url_params.get('category') + `&username=${username}`;
+        window.location.href = href;
+    }
+    /**
+     * @name onClickHome
+     * @type {Function}
+     * @listens btn_back#click
+     * @memberof QuizApp
+     * @description redirects to previous quiz
+     */
+    function onClickHome(btn){
+        let href = btn.getAttribute('href') + username;
+        window.location.href = href;
+    }
 }
-
-// debugging
-// TODO: Local storage chain of custody
-console.log(localStorage);
+// user page
+else if(page == 'user.html'){
+    // print username
+    document.getElementById('user_msg').innerHTML = username;
+    // build user data
+    let user = new User(username);
+}
