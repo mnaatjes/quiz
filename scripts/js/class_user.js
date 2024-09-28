@@ -30,11 +30,17 @@ class User {
          * @type {Array}
          * @description
          */
-        this.user_data = this.parseStorageData();
+        this.user_data = [];
+        /**
+         * @name container
+         * @type {HTMLElement}
+         * @description 
+         */
+        this.container = document.getElementById('info--container');
         /**
          * @implementation
          */
-        this.buildUserData();
+        this.checkData(this.data_storage);
     }
     /*------------------------------------------------------*/
     /**
@@ -91,19 +97,32 @@ class User {
     }
     /*------------------------------------------------------*/
     /**
+     * @name checkData
+     * @type {Method}
+     * @description
+     */
+    /*------------------------------------------------------*/
+    checkData(storage){
+        if(storage == null){
+            let msg         = document.createElement('div');
+            msg.innerHTML   = 'No User Data!'
+            msg.classList.add('scoreboard__row--empty');
+            this.container.appendChild(msg);
+        } else {
+            // get local storage data
+            this.user_data = this.parseStorageData();
+            // build markup
+            this.buildUserData();
+        }
+    }
+    /*------------------------------------------------------*/
+    /**
      * @name buildUserData
      * @type {Method}
      * @description
      */
     /*------------------------------------------------------*/
     buildUserData(){
-        /**
-         * @name container
-         * @type {HTMLElement}
-         * @description 
-         */
-        let container = document.getElementById('info--container');
-        console.log(container);
         /**
          * @name
          * @type {Function}
@@ -217,7 +236,7 @@ class User {
             row.appendChild(replay);
             row.appendChild(score);
             // create rows
-            container.appendChild(row);
+            this.container.appendChild(row);
         });
     }
 }

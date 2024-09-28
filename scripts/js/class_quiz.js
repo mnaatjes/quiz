@@ -409,7 +409,8 @@ class Quiz {
     /*------------------------------------------------------*/
     /**
      * @name answerSelect
-     * @type {Function}
+     * @type {Method}
+     *  radio_container data-selected state not changing???
      */
     /*------------------------------------------------------*/
     answerSelect(e){
@@ -541,7 +542,7 @@ class Quiz {
     /*------------------------------------------------------*/
     /**
      * @name advanceSlide
-     * @type {Function}
+     * @type {Method}
      */
     /*------------------------------------------------------*/
     advanceSlide(){

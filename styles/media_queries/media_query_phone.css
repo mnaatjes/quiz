@@ -10,6 +10,44 @@
         border-left: none;
         border-right: none;
     }
+    /*--------------------------------*/
+    /* Question: */
+    /*--------------------------------*/
+    .question__body {
+        font-size: 14px;
+    }
+    /*--------------------------------*/
+    /* header - cell: icon */
+    /*--------------------------------*/
+    div[class*="__info--header__cell"] div[class$="__icon"] {
+        /*POSITION*/
+        width: calc(var(--icon-size--header) + 12px);
+        height: calc(var(--icon-size--header) + 12px);
+    }
+    /*--------------------------------*/
+    /* Section: --user__info: item */
+    /*--------------------------------*/
+    section[class*="--user__info--scoreboard"] {
+        padding: 6px 0px;
+    }
+    /*--------------------------------*/
+    /* --user__info: header */
+    /*--------------------------------*/
+    section[class*="--user__info--header"] {
+        padding: 6px 0px;
+    }
+    /*--------------------------------*/
+    /* article: row */
+    /*--------------------------------*/
+    article[class*="scoreboard__row"] {
+        padding: 4px 0px;
+    }
+    /*--------------------------------*/
+    /* info - cell: category */
+    /*--------------------------------*/
+    .cell__icon--category {
+        --icon-size--category: 60px;
+    }
 }
 /*--------------------------------*/
 /* Template */

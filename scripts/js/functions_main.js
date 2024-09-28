@@ -168,3 +168,24 @@ async function fetchJSON(filepath, callback){
         console.error('Ooopsie!');
     }
 }
+/*------------------------------------------------------*/
+/**
+ * @name sortArray
+ * @type {Function}
+ * @description
+ * @param {String | Number} property
+ */
+/*------------------------------------------------------*/
+function sortArray(property){
+    let sort_order = 1;
+    // sort order negative
+    if(property[0] === '-'){
+        sort_order  = -1;
+        property    = property.substring(1);
+    }
+    // return array
+    return function(a, b) {
+        let result = (a[property] < b[property] ? -1 : (a[property] > b[property])) ? 1 : 0;
+        return result * sort_order;
+    }
+}

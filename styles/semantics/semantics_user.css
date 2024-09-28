@@ -38,22 +38,14 @@ section[class*="--user__info--header"] {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    /*BACKGROUND*/
-    /*BORDER*/
-    /*TEXT*/
-    /*SHADOW*/
-    /*TRANSITION*/
-    /*ANIMATION*/
-    /*TRANSFORM*/
-    /*DEBUGGING*/
 }
 /*---------------------------------------------------------------*/
-/* Button: Header */
+/* Icons: Header */
 /*---------------------------------------------------------------*/
 /*--------------------------------*/
 /* --user__info: header - cell */
 /*--------------------------------*/
-button[class*="__info--header__cell"] {
+div[class*="__info--header__cell"] {
     outline: none;
     /*VARS*/
     --icon-size--header: 24px;
@@ -76,7 +68,7 @@ button[class*="__info--header__cell"] {
 /*--------------------------------*/
 /* header - cell: icon */
 /*--------------------------------*/
-button[class*="__info--header__cell"] div[class$="__icon"] {
+div[class*="__info--header__cell"] div[class$="__icon"] {
     /*POSITION*/
     width: calc(var(--icon-size--header) + 24px);
     height: calc(var(--icon-size--header) + 24px);
@@ -94,30 +86,6 @@ button[class*="__info--header__cell"] div[class$="__icon"] {
     color: var(--color-background);
     font-size: var(--icon-size--header);
 }
-/*--------------------------------*/
-/* header - cell(hover) */
-/*--------------------------------*/
-button[class*="__info--header__cell"]:hover div[class$="__icon"] {
-    /*BACKGROUND*/
-    background: var(--color-error);
-    /*SHADOW*/
-    box-shadow: var(--ui-shadow-on);
-    /*ANIMATION*/
-    animation: btn__icon 1.95s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s infinite forwards normal;
-}
-button[class*="__info--header__cell"]:hover p {text-decoration: underline;}
-/*--------------------------------*/
-/* header - cell(active) */
-/*--------------------------------*/
-button[class*="__info--header__cell"][data-state="active"] div[class$="__icon"],
-button[class*="__info--header__cell"]:active div[class$="__icon"] {
-    /*BACKGROUND*/
-    background: var(--color-error);
-    /*SHADOW*/
-    box-shadow: var(--ui-shadow-inset);
-}
-button[class*="__info--header__cell"][data-state="active"] p {text-decoration: underline;}
-button[class*="__info--header__cell"]:active p {text-decoration: underline;}
 /*---------------------------------------------------------------*/
 /* Section: Row */
 /*---------------------------------------------------------------*/
@@ -134,6 +102,30 @@ section[class*="--user__info--scoreboard"] {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
+}
+/*--------------------------------*/
+/* info - empty_data */
+/*--------------------------------*/
+div[class="scoreboard__row--empty"] {
+    /*GRID*/
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    /*POSITION*/
+    /*DISPLAY*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*BACKGROUND*/
+    /*BORDER*/
+    border: var(--ui-border);
+    border-radius: 8px;
+    /*TEXT*/
+    /*SHADOW*/
+    box-shadow: var(--ui-shadow-on);
+    /*TRANSITION*/
+    /*ANIMATION*/
+    /*TRANSFORM*/
+    /*DEBUGGING*/
 }
 /*--------------------------------*/
 /* article: row */

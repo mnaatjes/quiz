@@ -47,6 +47,7 @@
 /* Disabled): */
 /*--------------------------------*/
 .radio__container[data-state="disabled"] {
+    pointer-events: none;
     /*BORDER*/
     border-color: var(--color-strokeDim);
     /*SHADOW*/
@@ -58,6 +59,7 @@
 /* Radio(Disabled): Checkmark True */
 /*--------------------------------*/
 .radio__container[data-state="disabled"] span {
+    pointer-events: none;
     /*BORDER*/
     border-color: var(--color-strokeDim);
     /*SHADOW*/
@@ -142,6 +144,7 @@
 /* Radio: input */
 /*--------------------------------*/
 input[type="radio"] {
+    pointer-events: none;
     cursor: pointer;
     width: 0;
     height: 0;
@@ -158,6 +161,7 @@ input[type="radio"] {
 /* Radio: label */
 /*--------------------------------*/
 .radio__container label {
+    pointer-events: none;
     /*TEXT*/
     font-size: 18px;
     font-weight: 600;
@@ -169,6 +173,7 @@ input[type="radio"] {
 /* Radio: Checkmark */
 /*--------------------------------*/
 .radio__container span {
+    pointer-events: none;
     /*POSITION*/
     width: 24px;
     height: 24px;

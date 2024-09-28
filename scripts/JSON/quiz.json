@@ -199,8 +199,8 @@
                     "points": 120,
                     "answers": [
                         {"result": false, "content": "Siege of Exeter"},
-                        {"result": true, "content": "Battle of Fulford"},
-                        {"result": false, "content": "Vacuum Tube"}
+                        {"result": true, "content": "Battle of Hastings"},
+                        {"result": false, "content": "Battle of Britain"}
                     ]
                 },
                 {

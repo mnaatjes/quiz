@@ -159,7 +159,8 @@ else if(page == 'landing.html'){
          * @return {String} replay
          */
         function getReply(percent){
-            if(percent > 90){ return 'Near Perfect Score'}
+            if(percent == 100){ return 'Perfect Score'}
+            else if(percent > 90){ return 'Near Perfect Score'}
             else if (percent > 80){ return 'Excellent!'}
             else if(percent > 70){ return 'Great Job!'}
             else if(percent < 70){ return 'Better Luck Next Time';}
